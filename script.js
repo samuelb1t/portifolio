@@ -13,4 +13,28 @@ seta.addEventListener('click', () => {
         textoEscondido.style.display = 'block';
     }
     seta.classList.toggle('ativo');
+});
+
+//menu hamburguer
+
+const menuHam = document.querySelector('.menu-ham');
+
+const hiddenMenu = document.querySelector('.menu-escondido');
+
+
+
+menuHam.addEventListener('click', () => {
+    if (window.getComputedStyle(hiddenMenu).right === '-370px') {
+        hiddenMenu.style.right = '0px';
+    } else {
+        hiddenMenu.style.right = '-370px';
+    }
 })
+
+
+window.addEventListener('scroll', () => {
+    if (window.getComputedStyle(hiddenMenu).right === '0px') {
+        hiddenMenu.style.right = '-370px';
+    }
+})
+
