@@ -25,7 +25,7 @@ a {
 
 .menu-escondido {
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: -370px;
 	background-color: #1A1A1A;
@@ -52,8 +52,13 @@ a {
 }
 
 .secao {
+	display: block;
 	height: calc(100vh - 120px);
-	margin: 60px 300px;
+	margin: 60px 300px 120px 300px;
+}
+
+.secao:last-child {
+	margin-bottom: 1000px;
 }
 
 .header {
@@ -76,6 +81,7 @@ a {
 	flex-direction: column;
 	gap: 8px;
 	z-index: 1;
+	cursor: pointer;
 }
 
 .menu-ham span {

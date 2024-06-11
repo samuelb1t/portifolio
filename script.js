@@ -17,24 +17,28 @@ seta.addEventListener('click', () => {
 
 //menu hamburguer
 
-const menuHam = document.querySelector('.menu-ham');
+const menuHam = document.querySelectorAll('.menu-ham');
 
 const hiddenMenu = document.querySelector('.menu-escondido');
 
-
-
-menuHam.addEventListener('click', () => {
-    if (window.getComputedStyle(hiddenMenu).right === '-370px') {
-        hiddenMenu.style.right = '0px';
-    } else {
-        hiddenMenu.style.right = '-370px';
-    }
+menuHam.forEach((item) => {
+    item.addEventListener('click', () => {
+        if (window.getComputedStyle(hiddenMenu).right === '-370px') {
+            hiddenMenu.style.right = '0px';
+        } else {
+            hiddenMenu.style.right = '-370px';
+        }
+    })
 })
 
 
-window.addEventListener('scroll', () => {
-    if (window.getComputedStyle(hiddenMenu).right === '0px') {
-        hiddenMenu.style.right = '-370px';
-    }
-})
+
+// resolvendo problema da margem pra baixo
+
+const sections = document.querySelectorAll('.secao');
+
+const section = sections[sections.length - 1];
+
+section.style.marginBottom = '60px';
+
 
