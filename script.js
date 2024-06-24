@@ -41,4 +41,18 @@ const section = sections[sections.length - 1];
 
 section.style.marginBottom = '60px';
 
+// scroll
+
+window.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    const vh = window.innerHeight;
+    const direcao = event.deltaY / 100;
+    const posicaoAtual = window.scrollY;
+    const proximaPosicao = posicaoAtual + (vh * direcao);
+    hiddenMenu.style.right = '-370px';
+    window.scrollTo({
+        top: proximaPosicao,
+        behavior: 'smooth',
+    })
+}, { passive: false });
 

@@ -73,7 +73,7 @@ a {
 }
 
 .loguinho {
-	width: 20px;
+	width: 21px;
 }
 
 .menu-ham {
@@ -310,4 +310,59 @@ a {
 .botao:hover {
 	color: #1A1A1A;
 	background-color: #E3E3E3;
+}
+
+.form-container {
+	margin: 0 270px;
+	margin-top: 50px;
+	display: grid;
+	gap: 25px;
+}
+
+.form-titulo {
+	font-family: "Work Sans", sans-serif;
+	font-size: 2.25rem;
+	font-weight: 700;
+}
+
+.input,
+.textarea {
+	display: block;
+	width: 100%;
+	border: none;
+	background-color: #E3E3E3;
+	padding: 15px 30px;
+	font-size: 1.5rem;
+	font-family: "Work Sans", sans-serif;
+	border: 2px solid transparent;
+	transition: .15s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+	font-size: 1.5rem;
+	font-family: "Work Sans", sans-serif;
+	color: black;
+}
+
+.input:focus,
+.textarea:focus {
+	border-radius: 1px;
+	background-color: #D5D5D5;
+	color: #313131;
+}
+
+.input:hover,
+.textarea:hover {
+	border: 2px solid #000000;
+}
+
+.enviar {
+	width: fit-content;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	font-family: "Work Sans", sans-serif;
+	font-weight: 500;
+	padding: 10px 20px;
+	border: 2px solid #000000;
 }
