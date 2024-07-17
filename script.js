@@ -53,6 +53,5 @@ window.addEventListener('wheel', (event) => {
     window.scrollTo({
         top: proximaPosicao,
         behavior: 'smooth',
-    })
+    });
 }, { passive: false });
-
