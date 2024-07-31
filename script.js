@@ -19,14 +19,19 @@ seta.addEventListener('click', () => {
 
 const menuHam = document.querySelectorAll('.menu-ham');
 
-const hiddenMenu = document.querySelector('.menu-escondido');
+const menuEscondido = document.querySelector('.menu-escondido');
 
 menuHam.forEach((item) => {
     item.addEventListener('click', () => {
-        if (window.getComputedStyle(hiddenMenu).right === '-370px') {
-            hiddenMenu.style.right = '0px';
+        if (window.getComputedStyle(menuEscondido).right === '-370px') {
+            menuEscondido.style.right = '0px';
+            setTimeout(() => {
+                item.classList.add('active');
+            }, 80)
+
         } else {
-            hiddenMenu.style.right = '-370px';
+            item.classList.remove('active');
+            menuEscondido.style.right = '-370px';
         }
     })
 })
@@ -49,9 +54,34 @@ window.addEventListener('wheel', (event) => {
     const direcao = event.deltaY / 100;
     const posicaoAtual = window.scrollY;
     const proximaPosicao = posicaoAtual + (vh * direcao);
-    hiddenMenu.style.right = '-370px';
-    window.scrollTo({
-        top: proximaPosicao,
-        behavior: 'smooth',
-    });
+    menuEscondido.style.right = '-370px';
+    menuHam.forEach((item) => {
+        item.classList.remove('active');
+    })
+    if (posicaoAtual % vh === 0) {
+        window.scrollTo({
+            top: proximaPosicao,
+            behavior: 'smooth',
+        });
+    }
 }, { passive: false });
+
+// scroll link menu ham
+
+const links = Array.from(document.querySelectorAll('.menu-escondido li  '));
+
+links.forEach((link) => {
+    link.addEventListener('click', (link) => {
+        const vh = window.innerHeight;
+        const itemArray = links.indexOf(link.target);
+        const proximaPosicao = vh * itemArray;
+        menuEscondido.style.right = '-370px';
+        menuHam.forEach((item) => {
+            item.classList.remove('active');
+        })
+        window.scrollTo({
+            top: proximaPosicao,
+            behavior: 'smooth',
+        });
+    })
+})

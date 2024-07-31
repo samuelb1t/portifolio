@@ -15,12 +15,13 @@
 <body class="body">
     <nav class="menu-escondido">
         <ul>
+            <li>Sobre</li>
             <li>Educação</li>
             <li>Projetos</li>
             <li>Contato</li>
         </ul>
     </nav>
-    <section class="secao">
+    <section class="secao" id="sobre">
         <header class="header">
             <img src="./img/logo.svg" alt="Logo" class="logo">
             <div class="menu-ham">
@@ -42,7 +43,7 @@
             </section>
         </article>
     </section>
-    <section class="secao">
+    <section class="secao" id="educacao">
         <header class="header">
             <img src="./img/loguinho.svg" alt="Logo" class="loguinho">
             <div class="menu-ham">
@@ -109,7 +110,7 @@
             </section>
         </article>
     </section>
-    <section class="secao">
+    <section class="secao" id="projetos">
         <header class="header">
             <img src="./img/loguinho.svg" alt="Logo" class="loguinho">
             <div class="menu-ham">
@@ -135,7 +136,7 @@
         </article>
         <a class="botao" href="./">Todos os projetos</a>
     </section>
-    <section class="secao">
+    <section class="secao" id="contato">
         <header class="header">
             <img src="./img/loguinho.svg" alt="Logo" class="loguinho">
             <div class="menu-ham">
@@ -145,12 +146,15 @@
             </div>
         </header>
         <h1 class="titulo">Contato <span class="ponto">.</span> </h1>
-        <article class="form-container">
-            <span class="form-titulo">entre em contato!</span>
-            <input class="input" type="text" placeholder="Nome">
-            <input class="input" type="email" placeholder="E-mail">
-            <textarea class="textarea" rows="4" placeholder="Mensagem"></textarea>
-            <input type="submit" name="enviar" class="enviar">
+        <article>
+            <form class="form-container" action="https://api.web3forms.com/submit" method="POST">
+                <span class="form-titulo">entre em contato!</span>
+                <input type="hidden" name="access_key" value="31315395-dc2f-453c-9ec7-683cc43d0476">
+                <input class="input" type="text" name="name" placeholder="Nome" required>
+                <input class="input" id="email" type="email" name="email" placeholder="E-mail" required>
+                <textarea class="textarea" rows="4" name="message" placeholder="Mensagem" required></textarea>
+                <button class="enviar" type="submit">Enviar</button>
+            </form>
         </article>
     </section>
     <script src="script.js"></script>

@@ -49,7 +49,26 @@ a {
 	margin: 0 auto;
 	font-family: "Lora", serif;
 	font-size: 1.5rem;
+	cursor: pointer;
+	position: relative;
 }
+
+.menu-escondido li::after {
+	content: '';
+	display: block;
+	width: 0%;
+	height: 3px;
+	background-color: #ffffff;
+	position: absolute;
+	left: -5%;
+	bottom: -5px;
+	transition: .2s;
+}
+
+.menu-escondido li:hover::after {
+	width: 110%;
+}
+
 
 .secao {
 	display: block;
@@ -82,6 +101,15 @@ a {
 	gap: 8px;
 	z-index: 1;
 	cursor: pointer;
+	transition: .3s;
+}
+
+.menu-ham.active {
+	rotate: 90deg;
+}
+
+.menu-ham.active span {
+	background-color: #ededed;
 }
 
 .menu-ham span {
@@ -365,4 +393,11 @@ a {
 	font-weight: 500;
 	padding: 10px 20px;
 	border: 2px solid #000000;
+	cursor: pointer;
+	background-color: #e3e3e3;
+	transition: .15s;
+}
+
+.enviar:hover {
+	background-color: #D5D5D5;
 }
