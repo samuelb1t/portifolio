@@ -24,7 +24,6 @@ a {
 }
 
 .menu-escondido {
-	display: flex;
 	position: fixed;
 	top: 0;
 	right: -370px;
@@ -33,14 +32,14 @@ a {
 	width: 100%;
 	max-width: 370px;
 	transition: .4s ease;
-}
-
-.menu-escondido ul {
+	padding-top: 150px;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
-	width: 100%;
-	margin-top: 200px;
+	gap: 20px;
+}
+
+.menu-escondido.menu-ativo {
+	right: 0px;
 }
 
 .menu-escondido li {
