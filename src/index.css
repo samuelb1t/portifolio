@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg {
+  background-color: #323232;
+}
+
+.display-font {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.lh {
+  line-height: 2.125rem;
+}
+
+.icon-transition {
+  transition: 0.15s;
+}
