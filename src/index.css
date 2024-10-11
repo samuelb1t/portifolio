@@ -17,3 +17,7 @@
 .icon-transition {
   transition: 0.15s;
 }
+
+.lines {
+  grid-template-rows: min-content 1fr;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoMdCode } from "react-icons/io";
 
-function Button({ texto }: { texto: string }) {
+function Button({ texto,onClick}: { texto: string,onClick:()=>void }) {
   const [state, setState] = useState(false);
   return (
     <button
@@ -12,8 +12,9 @@ function Button({ texto }: { texto: string }) {
       onMouseLeave={() => {
         setState(false);
       }}
+      onClick={onClick}
     >
-      <div className="flex justify-center relative pr-4">
+      <div className="flex justify-center relative pr-6 gap-1">
         <IoMdCode
           className="fill-red-700 w-6 self-end icon-transition"
           id="icone"
