@@ -1,11 +1,23 @@
 import Button from "./startButton";
 import Options from "./options";
 import { IoMdCode } from "react-icons/io";
+import { useState } from "react";
 
 function App(){
+    const [showOp,setShowOp] = useState(false);
+
+    const toggleOptions = ()=> {
+      if(showOp){
+        setTimeout(()=>{document.getElementById("buttons")?.classList.toggle("hidden");},300)
+      }else{
+        document.getElementById("buttons")?.classList.toggle("hidden");
+      }
+      setShowOp(!showOp);
+    }
+
     return(
-        <div className="grid w-full h-full pt-24 pb-14 justify-center lines gap-8">
-        <div>
+      <div className="grid w-full h-full pt-24 pb-14 justify-center lines">
+        <div className="h-fit">
           <div className="flex items-baseline">
             <IoMdCode className="fill-red-700 w-8" />
             <h1 className="text-7xl text-neutral-200 display-font">
@@ -22,14 +34,11 @@ function App(){
           </div>
         </div>
         <div className="grid max-w-xs w-full justify-self-center gap-6 items-end" id="buttons">
-          <Button texto="Iniciar." onClick={()=>{}}></Button>
-          <Button texto="Opções." onClick={()=>{
-            document.querySelector("#buttons")?.classList.toggle("hidden");
-            document.querySelector("#options")?.classList.toggle("hidden");
-            }}></Button>
+          <Button texto="Iniciar." onClick={()=>{window.location.href = "../home.html"}}></Button>
+          <Button texto="Opções." onClick={toggleOptions}></Button>
           <Button texto="Sair." onClick={()=>{}}></Button>
         </div>
-        <Options></Options>
+        <Options isVisible={showOp} toggleVisibility={toggleOptions}></Options>
       </div>
     )
 }
