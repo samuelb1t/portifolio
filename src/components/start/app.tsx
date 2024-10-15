@@ -18,7 +18,7 @@ function App() {
   };  
 
   return (
-    <div className="grid w-full h-full justify-center lines">
+    <div className="grid w-full h-full justify-center lines mt-4">
       <div className="h-fit">
         <div className="flex items-baseline">
           <IoMdCode className="fill-red-700 w-8" />

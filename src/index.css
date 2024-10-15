@@ -17,3 +17,11 @@
 .icon-transition {
   transition: 0.15s;
 }
+
+.about-columns{
+  grid-template-columns: 1fr auto;
+}
+
+.studies-columns{
+  grid-template-columns:  auto 1fr;
+}
