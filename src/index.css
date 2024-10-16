@@ -4,6 +4,7 @@
 
 .bg {
   background-color: #323232;
+  overflow: hidden;
 }
 
 .display-font {
@@ -18,10 +19,30 @@
   transition: 0.15s;
 }
 
-.about-columns{
+.about-columns {
   grid-template-columns: 1fr auto;
 }
 
-.studies-columns{
-  grid-template-columns:  auto 1fr;
+.studies-columns {
+  grid-template-columns: auto 1fr;
+}
+
+.contact-columns{
+  grid-template-columns: auto 1fr auto auto auto;
+}
+
+#course-container::-webkit-scrollbar {
+  height: 6px;
+  background-color: #171717;
+  margin-top: 10px;
+}
+
+#course-container::-webkit-scrollbar-thumb {
+  background-color: #323232;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.separator{
+  height: 2px;
 }
