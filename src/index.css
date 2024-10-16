@@ -46,3 +46,7 @@
 .separator{
   height: 2px;
 }
+
+.input-width{
+  min-width: 450px;
+}
