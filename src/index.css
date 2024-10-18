@@ -11,6 +11,10 @@
   font-family: "Pixelify Sans", sans-serif;
 }
 
+.text-font{
+  font-family: "Lato", sans-serif;
+}
+
 .lh {
   line-height: 2.125rem;
 }

@@ -4,7 +4,7 @@ import "./index.css";
 import Bg from "./components/background";
 import Header from "./components/main/header"
 import About from "./components/main/about"
-import Studies from "./components/main/estudos"
+import Studies from "./components/main/studies"
 import Projects from "./components/main/projects";
 import Contact from "./components/main/contact";
 
@@ -41,7 +41,6 @@ let isScrolling = false;
 
 document.addEventListener("wheel", (e) => {
     e.preventDefault();
-    
     if (isScrolling) return;  
     isScrolling = true;  
 
@@ -54,5 +53,6 @@ document.addEventListener("wheel", (e) => {
         behavior: "smooth",
     });
     setTimeout(()=>{isScrolling = false;},1350)
-    
-},{passive:false})
+},{passive:false});
+
+

@@ -1,21 +1,26 @@
 import { IoIosArrowDown } from "react-icons/io";
+import { useState } from "react";
 
-function seta(){
-    document.getElementById("arrow")?.classList.toggle('rotate-180');
-    document.getElementById("hiddenText")?.classList.toggle("hidden");
-}
 
-function Project({title,text,hiddenText,img}:{title:string,text:string,hiddenText:string,img:string}) {
+function Project({id,title,text,hiddenText,img}:{id:string,title:string,text:string,hiddenText:string,img:string}) {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleContent() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="grid text-neutral-200 bg-neutral-700 p-4 box-border rounded-xl">
       <img src={img} alt="Foto projeto" className="rounded-xl" />
       <h2 className="text-3xl">{title}</h2>
-      <div className="flex items-center relative">
-        <p className="text-base max-w-60">
+      <div className="relative">
+        <p className="text-base max-w-56 text-font">
           {text}
-          <span className="hidden text-base" id="hiddenText">{hiddenText}</span>
+          <span id={`pontinhos${id}`} className={isOpen ? 'hidden' : ''}>   ...</span>
+          <span className={`text-base ${isOpen ? '' : 'hidden'}`} id={`hiddenText-${id}`}>{hiddenText}</span>
         </p>
-        <IoIosArrowDown className="h-8 w-8 rotate-180 fill-red-700 cursor-pointer transition-all absolute right-0 top-4" id="arrow" onClick={seta}/>
+        <IoIosArrowDown className={`h-8 w-8 fill-red-700 cursor-pointer transition-all absolute right-0 top-4 ${isOpen ?'rotate-0':'rotate-180'}`} id={`arrow-${id}`} onClick={toggleContent}/>
       </div>
     </div>
   );

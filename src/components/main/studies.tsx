@@ -7,16 +7,16 @@ function Studies(){
     
                 <section className="text-neutral-200 grid">
                     <h2 className="block text-5xl mb-2">Faculdade<span className="text-red-700 text-7xl leading-10">.</span></h2>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-2 gap-8 text-font">
                         <div className="border-2 rounded-xl p-2 box-border grid">
                             <h3 className="text-2xl">Engenharia de Computação</h3>
                             <span className="text-xl block">UERGS</span>
                             <span className="text-xl">2023/2 - 2024/1</span>
                         </div>
-                        <div className="border-2 rounded-xl p-2 box-border">
+                        <div className="border-2 rounded-xl p-2 box-border grid">
                             <h3 className="text-2xl">Engenharia de Softare</h3>
                             <span className="text-xl block">PUC-RS</span>
-                            <span className="text-xl leading-none">2024/2 - hoje</span>
+                            <span className="text-xl">2024/2 - hoje</span>
                         </div>
                     </div>
                     <h2 className="block text-5xl mb-2 mt-4">Demais cursos<span className="text-red-700 text-7xl leading-10">.</span></h2>

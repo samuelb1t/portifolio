@@ -6,7 +6,7 @@ import App from "./components/start/app";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Bg>
+    <Bg id="start">
       <App></App>
     </Bg>
   </StrictMode>
