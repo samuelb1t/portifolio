@@ -29,27 +29,34 @@ function Contact() {
           <Svg />
         </a>
       </div>
-      <div className="grid gap-4 input-width justify-self-center mt-12">
+      <form className="grid gap-4 input-width justify-self-center mt-12" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="31315395-dc2f-453c-9ec7-683cc43d0476" />
         <input
           type="text"
+          name="name"
           placeholder="Name"
           className="rounded-xl p-2 box-border bg-neutral-700 text-neutral-200 text-2xl"
+          required
         />
         <input
-          type="text"
+          type="email"
+          name="email"
           placeholder="Email"
           className="rounded-xl p-2 box-border bg-neutral-700 text-neutral-200 text-2xl"
+          required
         />
         <textarea 
           placeholder="Message"
+          name="message"
           className="rounded-xl p-2 box-border bg-neutral-700 text-neutral-200 text-2xl resize-none"
           rows={3}
+          required
         ></textarea>
-      <button className="flex self-start w-fit text-neutral-200 text-2xl items-center gap-2 bg-neutral-700 p-2 rounded-xl">
+      <button className="flex self-start w-fit text-neutral-200 text-2xl items-center gap-2 bg-neutral-700 p-2 rounded-xl" type="submit">
         <IoMdCode className="fill-red-700 w-6 self-end icon-transition"
           id="icone"
         />Enviar</button>
-      </div>
+      </form>
     </section>
   );
 }
