@@ -1,15 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import Svg from "./linkedinSvg";
-import { useState } from "react";
 import { IoMdCode } from "react-icons/io";
 
 function Contact() {
-  const [currentFill, setCurrentFill] = useState("logo-cor");
-
-  function changeFill(){
-		setCurrentFill("logo-cor2");
-	}
-
   return (
     <section className="mt-8 grid">
       <div className="grid contact-columns items-center gap-4">

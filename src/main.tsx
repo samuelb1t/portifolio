@@ -41,9 +41,9 @@ let isScrolling = false;
 
 document.addEventListener("wheel", (e) => {
     e.preventDefault();
+    console.log(e.deltaY)
     if (isScrolling) return;  
     isScrolling = true;  
-
     const vh = window.innerHeight;
     const direction = Math.sign(e.deltaY);
     const currentPosition = window.scrollY;
