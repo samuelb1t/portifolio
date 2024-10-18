@@ -1,4 +1,3 @@
-import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import Hamburger from 'hamburger-react'
 import { useEffect } from "react";
@@ -12,7 +11,7 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
     }
 
     useEffect(() => {
-        const handleWheel = (e: WheelEvent) => {
+        const handleWheel = () => {
         if (!isVisible) {
             toggleVisibility();
             toggleMenuHam();
