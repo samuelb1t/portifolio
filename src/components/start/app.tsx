@@ -40,7 +40,7 @@ function App() {
         <Button
           texto="Iniciar."
           onClick={() => {
-            window.location.href = "../.././main.html";
+            window.location.href = "../../../main.html";
           }}
         ></Button>
         <Button texto="Opções." onClick={toggleOptions}></Button>
