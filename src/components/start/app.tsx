@@ -34,7 +34,7 @@ function App() {
         </div>
       </div>
       <div
-        className="grid max-w-xs w-full justify-self-center gap-6 items-end"
+        className="grid max-w-xs w-full justify-self-center gap-2 items-end"
         id="buttons"
       >
         <Button

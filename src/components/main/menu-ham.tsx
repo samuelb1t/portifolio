@@ -33,12 +33,21 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
             </div>
             <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3" id="ul">
                 <div className="flex gap-2 items-center">
-                    <IoMdCode className="fill-red-700 w-6 self-end icon-transition" id="icone"/>
-                    <a href="#about"><li >Sobre mim</li></a>
+                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY == 0 ? 1 : 0 }} id="icone"/>
+                  <a href="#about"><li >Sobre mim</li></a>
                 </div>
-                <a href="#studies"><li >Estudos</li></a>
-                <a href="#projects"><li >Projetos</li></a>
-                <a href="#contact"><li >Contato</li></a>
+                <div className="flex gap-2 items-center">
+                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY > 100 && window.scrollY < 750 ? 1 : 0 }} id="icone"/>
+                  <a href="#studies"><li >Estudos</li></a>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition"  style={{opacity: window.scrollY > 750 && window.scrollY < 1400 ? 1 : 0 }} id="icone"/>
+                  <a href="#projects"><li >Projetos</li></a>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY > 1400 ? 1 : 0 }}  id="icone"/>
+                  <a href="#contact"><li >Contato</li></a>
+                </div>
             </ul>
         </div>
     )
