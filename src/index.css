@@ -4,7 +4,7 @@
 
 .smooth{
   scroll-behavior: smooth !important;
-}
+} 
 
 .bg {
   background-color: #323232;
@@ -42,13 +42,26 @@
 #course-container::-webkit-scrollbar {
   height: 6px;
   background-color: #171717;
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 #course-container::-webkit-scrollbar-thumb {
   background-color: #323232;
   border-radius: 10px;
   cursor: pointer;
+}
+
+#course::-webkit-scrollbar{
+  width: 6px;
+  background-color: #171717;
+  border-radius: 5px;
+}
+
+#course::-webkit-scrollbar-thumb{
+  cursor: pointer;
+  width: 6px;
+  background-color: #323232;
+  border-radius: 5px;
 }
 
 .separator{

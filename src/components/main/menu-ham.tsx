@@ -28,10 +28,10 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
             <div className="flex items-center justify-between">
                 <MdLightMode style={{opacity: isVisible ? 0 : 1}} className="cursor-pointer" id="modo"/>
                 <div onClick={toggleVisibility}>
-                    <Hamburger color="#e5e5e5" toggled={!isVisible} toggle={toggleVisibility} ></Hamburger>
+                    <Hamburger color="#e5e5e5" toggled={!isVisible} toggle={toggleVisibility}></Hamburger>
                 </div>
             </div>
-            <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3" id="ul">
+            <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3 items-center i" id="ul">
                 <div className="flex gap-2 items-center">
                   <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY == 0 ? 1 : 0 }} id="icone"/>
                   <a href="#about"><li >Sobre mim</li></a>
