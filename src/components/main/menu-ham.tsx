@@ -1,7 +1,7 @@
 import { MdLightMode } from "react-icons/md";
 import Hamburger from 'hamburger-react'
 import { useEffect } from "react";
-import { IoMdCode } from "react-icons/io";
+import MenuItem from "./menuItem";
 
 
 function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibility : ()=> void}){
@@ -32,22 +32,10 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
                 </div>
             </div>
             <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3 items-center i" id="ul">
-                <div className="flex gap-2 items-center">
-                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY == 0 ? 1 : 0 }} id="icone"/>
-                  <a href="#about"><li >Sobre mim</li></a>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY > 100 && window.scrollY < 750 ? 1 : 0 }} id="icone"/>
-                  <a href="#studies"><li >Estudos</li></a>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition"  style={{opacity: window.scrollY > 750 && window.scrollY < 1400 ? 1 : 0 }} id="icone"/>
-                  <a href="#projects"><li >Projetos</li></a>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY > 1400 ? 1 : 0 }}  id="icone"/>
-                  <a href="#contact"><li >Contato</li></a>
-                </div>
+                <MenuItem href="#about" text="Sobre mim" min={0} max={100}></MenuItem>
+                <MenuItem href="#studies" text="Estudos" min={100} max={750}></MenuItem>
+                <MenuItem href="#projects" text="Projetos" min={750} max={1400}></MenuItem>
+                <MenuItem href="#contact" text="Contato" min={1400} max={2100}></MenuItem>
             </ul>
         </div>
     )

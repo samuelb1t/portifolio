@@ -71,3 +71,9 @@
 .input-width{
   min-width: 450px;
 }
+
+li::after {
+  content: '';
+  width: var(--after-width);
+  transition: width 0.3s ease;
+}

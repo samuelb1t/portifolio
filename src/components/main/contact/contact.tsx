@@ -7,9 +7,14 @@ import { useState } from "react";
 function Contact() {
   const [onGithub, setonGithub] = useState(false);
   const [onLinkedin, setOnLinkedin] = useState(false);
+  const [onButton, setOnButton] = useState(false);
 
   function toggleonGithub() {
     setonGithub(!onGithub);
+  }
+
+  function toggleonButton() {
+    setOnButton(!onButton);
   }
 
   function toggleOnLinkedin(){
@@ -61,8 +66,11 @@ function Contact() {
           required
         ></textarea>
         <button
-          className="flex self-start w-fit text-neutral-200 text-2xl items-center gap-2 bg-neutral-700 p-2 rounded-xl"
+          className="flex self-start w-fit text-neutral-200 text-2xl items-center gap-2 p-2 rounded-xl duration-300"
+          style={{backgroundColor: onButton ? "#262626" : "#404040"}}
           type="submit"
+          onMouseEnter={toggleonButton}
+          onMouseLeave={toggleonButton}
         >
           <IoMdCode
             className="fill-red-700 w-6 self-end icon-transition"
