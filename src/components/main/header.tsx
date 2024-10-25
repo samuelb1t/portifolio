@@ -1,15 +1,17 @@
 import Menu from "./menu-ham";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [active,setActive] = useState(true);
+  const navigate = useNavigate();
 
  const toggleMenu = () =>{
   setActive(!active);
 }
   return (
     <header className="flex justify-between mb-12 relative">
-      <a href="../../../index.html"><img src="../../../img/samuel.svg" alt="'Logo'" className="mt-4"/></a>
+      <a onClick={() => {navigate("/"); }}><img src="../../../img/samuel.svg" alt="'Logo'" className="mt-4 cursor-pointer"/></a>
       <div onClick={toggleMenu}>
         <Menu isVisible={active} toggleVisibility={toggleMenu}></Menu>
       </div>

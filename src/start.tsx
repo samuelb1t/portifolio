@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Bg from "./components/background";
-import App from "./components/start/app";
+import AppRoutes from "./appRoutes";
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Bg id="start">
-      <App></App>
-    </Bg>
+    <div>
+      <AppRoutes></AppRoutes>
+    </div>
   </StrictMode>
 );

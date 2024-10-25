@@ -1,40 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Bg from "./components/background";
-import Header from "./components/main/header";
-import About from "./components/main/about/about";
-import Studies from "./components/main/studies/studies";
-import Projects from "./components/main/projects/projects";
-import Contact from "./components/main/contact/contact";
+import AppRoutes from "./appRoutes";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Bg id="about">
-      <div className="sections">
-        <Header></Header>
-        <About></About>
-      </div>
-    </Bg>
-    <Bg id="studies">
-      <div className="sections">
-        <Header></Header>
-        <Studies></Studies>
-      </div>
-    </Bg>
-    <Bg id="projects">
-      <div className="sections">
-        <Header></Header>
-        <Projects></Projects>
-      </div>
-    </Bg>
-    <Bg id="contact">
-      <div className="sections">
-        <Header></Header>
-        <Contact></Contact>
-      </div>
-    </Bg>
-  </StrictMode>
+    <div>
+      <AppRoutes></AppRoutes>
+    </div>
+  </StrictMode> 
 );
 
 let isScrolling = false;
