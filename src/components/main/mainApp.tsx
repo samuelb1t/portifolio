@@ -6,6 +6,31 @@ import Projects from "./projects/projects";
 import Contact from "./contact/contact";
 
 function mainApp() {
+  let isScrolling = false;
+
+  document.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      console.log(e.deltaY);
+      if (isScrolling) return;
+      isScrolling = true;
+      const vh = window.innerHeight;
+      const direction = Math.sign(e.deltaY);
+      const currentPosition = window.scrollY;
+      const nextPosition = currentPosition + vh * direction;
+      window.scrollTo({
+        top: nextPosition,
+        behavior: "smooth",
+      });
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1350);
+    },
+    { passive: false }
+  );
+  
+
   return (
     <div>
       <Bg id="about">
