@@ -28,7 +28,7 @@ function Studies(){
                         <Course name="JavaScript para Web: Crie páginas dinâmicas" school="Alura" hours="10h" date="abril/2023"></Course> 
                         <Course name="HTML e CSS: trabalhando com responsividade e publicação de projetos" school="Alura" hours="6h" date="mar/2023"></Course>                                       
                         <Course name="Lógica de programação: comece em lógica com o jogo Pong e JavaScript" school="Alura" hours="6h" date="mar/2023"></Course>
-                        <Course name="Lógica de programação: laços e listas com JavaScript" school="Alura" hours="4h" date="mar/2023"></Course>  
+                        <Course name="Lógica de programação: laços e listas com JavaScript" school="Alura" hours="4h" date="mar/2023"></Course> 
                     </div>
                 </section>
             

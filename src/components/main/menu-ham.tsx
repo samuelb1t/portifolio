@@ -24,7 +24,7 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
 
     return(
         <div style={{backgroundColor: isVisible ? "#171717" :"#323232"}}
-             className="p-3  text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 w-48" id="menu">
+             className="p-3  text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 w-48 z-50" id="menu">
             <div className="flex items-center justify-between">
                 <MdLightMode style={{opacity: isVisible ? 0 : 1}} className="cursor-pointer" id="modo"/>
                 <div onClick={toggleVisibility}>
