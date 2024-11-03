@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click";
 import ProjectCard from "../main/projects/3dCard";
@@ -65,7 +65,6 @@ export function ExpandCard() {
               <img src={active.src} alt={active.title} className="w-full h-64 object-cover" />
               <div className="p-4">
                 <h3 className="font-medium text-neutral-700 dark:text-neutral-200 text-base">{active.title}</h3>
-                <p className="text-neutral-600 dark:text-neutral-400 text-base">{active.description}</p>
                 <div className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400">
                   {typeof active.content === "function" ? active.content() : active.content}
                 </div>

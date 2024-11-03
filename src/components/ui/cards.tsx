@@ -1,6 +1,3 @@
-import { div } from "framer-motion/client"
-
-// cardsData.ts
 export const cards = [
     {
       title: "Calculadora",
