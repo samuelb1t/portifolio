@@ -4,7 +4,6 @@ import About from "./about/about";
 import Studies from "./studies/studies";
 import Projects from "./projects/projects";
 import Contact from "./contact/contact";
-import ProjectCard from "./projects/3dCard";
 
 function mainApp() {
   let isScrolling = false;
@@ -30,7 +29,6 @@ function mainApp() {
     },
     { passive: false }
   );
-  
 
   return (
     <div>
@@ -57,9 +55,6 @@ function mainApp() {
           <Header></Header>
           <Contact></Contact>
         </div>
-      </Bg>
-      <Bg id="a">
-          <ProjectCard title="titulo" img="../../../img/calculadora.png"></ProjectCard>
       </Bg>
     </div>
   );
