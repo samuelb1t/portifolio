@@ -1,7 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import Svg from "./linkedinSvg";
-import { IoMdCode } from "react-icons/io";
-import Input from "./input";
+import { SignupFormDemo } from "./form";
 import { useState } from "react";
 
 function Contact() {
@@ -22,7 +21,7 @@ function Contact() {
   }
 
   return (
-    <section className="mt-8 grid">
+    <section className=" grid">
       <div className="grid contact-columns items-center gap-4">
         <h1 className="text-neutral-200 text-5xl mb-4">
           Contato<span className="text-red-700 text-7xl leading-10">.</span>
@@ -46,39 +45,7 @@ function Contact() {
           <Svg hover={toggleOnLinkedin}/>
         </a>
       </div>
-      <form
-        className="grid gap-4 input-width justify-self-center mt-12"
-        action="https://api.web3forms.com/submit"
-        method="POST"
-      >
-        <input
-          type="hidden"
-          name="access_key"
-          value="31315395-dc2f-453c-9ec7-683cc43d0476"
-        />
-        <Input type="text" name="name" placeholder="Name"></Input>
-        <Input type="email" name="email" placeholder="Email"></Input> 
-        <textarea
-          placeholder="Message"
-          name="message"
-          className="rounded-xl p-2 box-border bg-neutral-700 text-neutral-200 text-2xl resize-none"
-          rows={3}
-          required
-        ></textarea>
-        <button
-          className="flex self-start w-fit text-neutral-200 text-2xl items-center gap-2 p-2 rounded-xl duration-300"
-          style={{backgroundColor: onButton ? "#262626" : "#404040"}}
-          type="submit"
-          onMouseEnter={toggleonButton}
-          onMouseLeave={toggleonButton}
-        >
-          <IoMdCode
-            className="fill-red-700 w-6 self-end icon-transition"
-            id="icone"
-          />
-          Enviar
-        </button>
-      </form>
+      <SignupFormDemo></SignupFormDemo>
     </section>
   );
 }
