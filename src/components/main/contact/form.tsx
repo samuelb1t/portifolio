@@ -6,25 +6,22 @@ import { Textarea } from "../../ui/textarea";
 import { cn } from "../../lib/utils";
 import { IoMdCode } from "react-icons/io";
 
-export function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+export function Form() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-2  shadow-input">
-      <form onSubmit={handleSubmit} className="grid gap-4">
+      <form className="grid gap-4" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="31315395-dc2f-453c-9ec7-683cc43d0476" />
         <LabelInputContainer>
             <Label htmlFor="fullname">Nome completo</Label>
-            <Input id="fullname" placeholder="Digite seu nome" type="text" />
+            <Input id="fullname" placeholder="Digite seu nome" type="text" name="name" />
         </LabelInputContainer>
         <LabelInputContainer>
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="exemplo@gmail.com" type="email" />
+          <Input id="email" placeholder="exemplo@gmail.com" type="email" name="email"/>
         </LabelInputContainer>
         <LabelInputContainer>  
           <Label htmlFor="mensagem">Mensagem</Label>
-          <Textarea placeholder="Digite sua mensagem"></Textarea>
+          <Textarea placeholder="Digite sua mensagem" name="message"></Textarea>
         </LabelInputContainer>
         <button
           className="bg-gradient-to-br relative group/btn from-black to-neutral-600 dark:from-zinc-700 dark:to-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center gap-1"

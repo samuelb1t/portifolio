@@ -8,7 +8,7 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
+  ({ className,name, ...props }, ref) => {
     const radius = 100;
     const [visible, setVisible] = React.useState(false);
 
@@ -26,7 +26,9 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         style={{
           background: useMotionTemplate`
             radial-gradient(
-              ${visible ? radius + "px" : "0px"} circle at ${mouseX}px ${mouseY}px,
+              ${
+                visible ? radius + "px" : "0px"
+              } circle at ${mouseX}px ${mouseY}px,
               #b91c1c,
               transparent 80%
             )
@@ -38,7 +40,9 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         className="p-[2px] rounded-lg transition duration-300 group/textarea"
       >
         <textarea
-            rows={4}
+          required
+          name={name}
+          rows={4}
           className={cn(
             `flex w-full h-24 border-none bg-gray-50 dark:bg-zinc-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-xl
              placeholder:text-neutral-400 dark:placeholder-text-neutral-600 

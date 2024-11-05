@@ -4,7 +4,6 @@ import About from "./about/about";
 import Studies from "./studies/studies";
 import Projects from "./projects/projects";
 import Contact from "./contact/contact";
-import { SignupFormDemo } from "./contact/form";
 
 
 function mainApp() {

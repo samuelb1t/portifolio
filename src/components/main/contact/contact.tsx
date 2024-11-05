@@ -1,19 +1,14 @@
 import { FaGithub } from "react-icons/fa";
 import Svg from "./linkedinSvg";
-import { SignupFormDemo } from "./form";
+import { Form } from "./form";
 import { useState } from "react";
 
 function Contact() {
   const [onGithub, setonGithub] = useState(false);
   const [onLinkedin, setOnLinkedin] = useState(false);
-  const [onButton, setOnButton] = useState(false);
 
   function toggleonGithub() {
     setonGithub(!onGithub);
-  }
-
-  function toggleonButton() {
-    setOnButton(!onButton);
   }
 
   function toggleOnLinkedin(){
@@ -45,7 +40,7 @@ function Contact() {
           <Svg hover={toggleOnLinkedin}/>
         </a>
       </div>
-      <SignupFormDemo></SignupFormDemo>
+      <Form></Form>
     </section>
   );
 }
