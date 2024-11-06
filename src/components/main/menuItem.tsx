@@ -17,8 +17,9 @@ function menuItem({href,text,min,max}:{href:string,text:string,min:number,max:nu
         onMouseLeave={toggleMenuHover}
         >
             <IoMdCode className="fill-red-700 w-6 self-end icon-transition" style={{opacity: window.scrollY >= min && window.scrollY < max  ? 1 : 0}} id="icone"/>
-        <a href={href} 
+        <a href={href}
         >{text}</a>
+        <IoMdCode className="fill-red-700 w-6 self-end icon-transition opacity-0" id="icone"/>
       </li>
     )
 }

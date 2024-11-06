@@ -24,8 +24,7 @@ function Contact() {
         <span className="bg-neutral-200 w-full separator rounded-sm"></span>
         <a href="https://github.com/samuelb1t" target="_blank">
           <FaGithub
-            className="w-10 h-10 duration-300"
-            style={{ color: onGithub ? "#696969" : "#e5e5e5" }}
+            className={`w-10 h-10 duration-300 transform ${onGithub ? 'scale-150' : 'scale-100'} fill-neutral-200`}
             onMouseEnter={toggleonGithub}
             onMouseLeave={toggleonGithub}
           />
@@ -37,7 +36,7 @@ function Contact() {
           className="duration-300"
           style={{ color: onLinkedin ? "#696969" : "#e5e5e5" }}
         >
-          <Svg hover={toggleOnLinkedin}/>
+          <Svg hover={toggleOnLinkedin} onLinkedin={onLinkedin}/>
         </a>
       </div>
       <Form></Form>

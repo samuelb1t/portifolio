@@ -24,14 +24,14 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
 
     return(
         <div style={{backgroundColor: isVisible ? "#171717" :"#323232"}}
-             className="p-3  text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 w-48 z-50" id="menu">
+             className="p-3  text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 z-50" id="menu">
             <div className="flex items-center justify-between">
                 <MdLightMode style={{opacity: isVisible ? 0 : 1}} className="cursor-pointer" id="modo"/>
                 <div onClick={toggleVisibility}>
                     <Hamburger color="#e5e5e5" toggled={!isVisible} toggle={toggleVisibility}></Hamburger>
                 </div>
             </div>
-            <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3 items-center i" id="ul">
+            <ul style={{display: isVisible ? "none":"grid"}} className="m-2 gap-3 items-center " id="ul">
                 <MenuItem href="#about" text="Sobre mim" min={0} max={100}></MenuItem>
                 <MenuItem href="#studies" text="Estudos" min={100} max={750}></MenuItem>
                 <MenuItem href="#projects" text="Projetos" min={750} max={1400}></MenuItem>
