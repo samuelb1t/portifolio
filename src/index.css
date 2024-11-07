@@ -35,6 +35,10 @@
   grid-template-columns: auto 1fr;
 }
 
+.menu-columns{
+  grid-template-columns: auto 1fr auto;
+}
+
 .contact-columns{
   grid-template-columns: auto 1fr auto auto auto;
 }

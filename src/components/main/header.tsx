@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="flex justify-between mb-12 relative">
       <a onClick={() => {navigate("/"); }}><img src="../../../img/samuel.svg" alt="'Logo'" className="mt-4 cursor-pointer"/></a>
-      <div onClick={toggleMenu}>
+      <div>
         <Menu isVisible={active} toggleVisibility={toggleMenu}></Menu>
       </div>
     </header>

@@ -10,7 +10,7 @@ function menuItem({href,text,min,max}:{href:string,text:string,min:number,max:nu
     }
 
     return(
-        <li className="flex gap-2 items-center relative after:content-[''] after:bg-slate-200 after:h-0.5 after:absolute after:-bottom-1"
+        <li className="grid menu-columns gap-2 items-center relative after:content-[''] after:bg-slate-200 after:h-0.5 after:absolute after:-bottom-1"
         style={{'--after-width': mouseOn ? '100%' : '0'} as React.CSSProperties}
         onMouseEnter={toggleMenuHover}
         onMouseLeave={toggleMenuHover}
