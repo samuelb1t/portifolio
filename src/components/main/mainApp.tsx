@@ -5,7 +5,6 @@ import Studies from "./studies/studies";
 import Projects from "./projects/projects";
 import Contact from "./contact/contact";
 
-
 function mainApp() {
   let isScrolling = false;
 

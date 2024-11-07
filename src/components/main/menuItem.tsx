@@ -6,7 +6,6 @@ function menuItem({href,text,min,max}:{href:string,text:string,min:number,max:nu
     const [mouseOn,setMouseOn] = useState(false);
 
     function toggleMenuHover(){
-        console.log("aa")
         setMouseOn(!mouseOn);
     }
 
