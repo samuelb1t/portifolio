@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import MenuItem from "./menuItem";
 
 
-function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibility : ()=> void}){
+function Menu({isVisible,toggleVisibility,id}:{isVisible : boolean, toggleVisibility : ()=> void,id:string}){
 
     useEffect(() => {
         const handleWheel = () => {
@@ -12,14 +12,28 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
             toggleVisibility();
         }
         };
+
+        const handleClickOutside = (e : MouseEvent) => {
+            const menu = document.getElementById(id);
+            if(!menu?.contains(e.target as Node)){
+                handleWheel();
+            }
+        }
+
         window.addEventListener("wheel", handleWheel, { passive: true });
+        window.addEventListener("click", handleClickOutside);
     
-        return () => window.removeEventListener("wheel", handleWheel);
-      }, [isVisible, toggleVisibility]); 
+        return () => {    
+            window.removeEventListener("wheel", handleWheel);
+            document.removeEventListener("click", handleClickOutside);
+        }
+      }, [isVisible, toggleVisibility,id]); 
+
+  
 
     return(
         <div style={{backgroundColor: isVisible ? "#171717" :"#323232"}}
-             className="p-2 text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 z-50 bg-red-600" id="menu">
+             className="p-2 text-neutral-200 text-2xl text-center rounded-xl grid absolute right-0 z-50 bg-red-600" id={id}>
             <div className="flex items-center justify-between">
                 <MdLightMode style={{display: isVisible ? "none" : "block"}} className="cursor-pointer" id="modo"/>
                 <div onClick={toggleVisibility}>
@@ -27,10 +41,10 @@ function Menu({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibilit
                 </div>
             </div>
             <ul style={{display: isVisible ? "none":"grid"}} className="grid m-2 gap-2 items-center " id="ul">
-                <MenuItem href="#about" text="Sobre mim" min={0} max={100}></MenuItem>
-                <MenuItem href="#studies" text="Estudos" min={100} max={750}></MenuItem>
-                <MenuItem href="#projects" text="Projetos" min={750} max={1400}></MenuItem>
-                <MenuItem href="#contact" text="Contato" min={1400} max={2100}></MenuItem>
+                <MenuItem href="#about" text="Sobre mim" i={0}></MenuItem>
+                <MenuItem href="#studies" text="Estudos" i={1}></MenuItem>
+                <MenuItem href="#projects" text="Projetos" i={2}></MenuItem>
+                <MenuItem href="#contact" text="Contato" i={3}></MenuItem>
             </ul>
         </div>
     )

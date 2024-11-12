@@ -34,25 +34,25 @@ function mainApp() {
     <div className="dark">
       <Bg id="about">
         <div className="sections">
-          <Header></Header>
+          <Header menuId="1"></Header>
           <About></About>
         </div>
       </Bg>
       <Bg id="studies">
         <div className="sections">
-          <Header></Header>
+          <Header menuId="2"></Header>
           <Studies></Studies>
         </div>
       </Bg>
       <Bg id="projects">
         <div className="sections">
-          <Header></Header>
+          <Header menuId="3"></Header>
           <Projects></Projects>
         </div>
       </Bg>
       <Bg id="contact">
         <div className="sections">
-          <Header></Header>
+          <Header menuId="4"></Header>
           <Contact></Contact>
         </div>
       </Bg>
