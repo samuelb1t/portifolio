@@ -17,6 +17,8 @@ function Menu({isVisible,toggleVisibility,id}:{isVisible : boolean, toggleVisibi
             const menu = document.getElementById(id);
             if(!menu?.contains(e.target as Node)){
                 handleWheel();
+                console.log("aaaaaa")
+                console.log(window)
             }
         }
 
@@ -41,10 +43,10 @@ function Menu({isVisible,toggleVisibility,id}:{isVisible : boolean, toggleVisibi
                 </div>
             </div>
             <ul style={{display: isVisible ? "none":"grid"}} className="grid m-2 gap-2 items-center " id="ul">
-                <MenuItem href="#about" text="Sobre mim" i={0}></MenuItem>
-                <MenuItem href="#studies" text="Estudos" i={1}></MenuItem>
-                <MenuItem href="#projects" text="Projetos" i={2}></MenuItem>
-                <MenuItem href="#contact" text="Contato" i={3}></MenuItem>
+                <MenuItem href="#about" text="Sobre mim" targetSectionId="1"></MenuItem>
+                <MenuItem href="#studies" text="Estudos" targetSectionId="2" ></MenuItem>
+                <MenuItem href="#projects" text="Projetos" targetSectionId="3"></MenuItem>
+                <MenuItem href="#contact" text="Contato" targetSectionId="4"></MenuItem>
             </ul>
         </div>
     )
