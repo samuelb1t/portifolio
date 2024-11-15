@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "../hooks/use-outside-click";
-import ProjectCard from "../main/projects/3dCard";
-import { cards } from "./cards";
+import { useOutsideClick } from "../../hooks/use-outside-click";
+import ProjectCard from "./3dCard";
+import { project } from "../../ui/project";
 
 export function ExpandCard() {
-  const [active, setActive] = useState<(typeof cards)[number] | null>(null);
+  const [active, setActive] = useState<(typeof project)[number] | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -17,7 +17,6 @@ export function ExpandCard() {
       }
     }
 
-
     if (active) {
       document.body.style.overflow = "hidden";
     } else {
@@ -25,9 +24,10 @@ export function ExpandCard() {
     }
 
     window.addEventListener("keydown", onKeyDown);
-    window.addEventListener("wheel",()=>{setActive(null)})
+    window.addEventListener("wheel", () => {
+      setActive(null);
+    });
     return () => window.removeEventListener("keydown", onKeyDown);
-
   }, [active]);
 
   useOutsideClick(ref, () => setActive(null));
@@ -55,18 +55,25 @@ export function ExpandCard() {
               exit={{ opacity: 0 }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
-            >
-            </motion.button>
+            ></motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
               className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <img src={active.src} alt={active.title} className="w-full h-64 object-cover" />
+              <img
+                src={active.src}
+                alt={active.title}
+                className="w-full h-64 object-cover"
+              />
               <div className="p-4">
-                <h3 className="font-medium text-neutral-700 dark:text-neutral-200 text-base">{active.title}</h3>
+                <h3 className="font-medium text-neutral-700 dark:text-neutral-200 text-base">
+                  {active.title}
+                </h3>
                 <div className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400">
-                  {typeof active.content === "function" ? active.content() : active.content}
+                  {typeof active.content === "function"
+                    ? active.content()
+                    : active.content}
                 </div>
               </div>
             </motion.div>
@@ -74,14 +81,13 @@ export function ExpandCard() {
         ) : null}
       </AnimatePresence>
       <ul className="grid grid-cols-3 items-start gap-6">
-        {/* max-w-2xl mx-auto w-full grid grid-cols-3 items-start gap-4 */}
-        {cards.map((card) => (
+        {project.map((card) => (
           <motion.div
             key={card.title}
             layoutId={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
           >
-            <ProjectCard title={card.title} img={card.src} /> {/* Pass title and src */}
+            <ProjectCard title={card.title} img={card.src} />{" "}
           </motion.div>
         ))}
       </ul>

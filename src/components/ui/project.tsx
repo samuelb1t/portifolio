@@ -1,7 +1,12 @@
-export const cards = [
+import calculadora from "/img/calculadora.png";
+import clima from "/img/clima.png";
+import filme from "/img/letterbox.png";
+
+
+export const project = [
     {
       title: "Calculadora",
-      src: "../../../img/calculadora.png",
+      src: calculadora,
       content: () => (
         <div>
           <p className="mt-2">
@@ -13,18 +18,18 @@ export const cards = [
     },
     {
         title: "Projeto clima",
-        src: "../../../img/projeto-clima.png",
+        src: clima,
         content: () => (
           <div>
             <p className="mt-2">
-            O projeto foi desenvolvido em grupo no grupo de estudo da AGES. A proposta do projeto é permitir pesquisar o clima em qualquer cidade do mundo, possibilitando também a criação de um login para criação de um histórico.</p>
+            O projeto foi desenvolvido em grupo no gru'po de estudo da AGES. A proposta do projeto é permitir pesquisar o clima em qualquer cidade do mundo, possibilitando também a criação de um login para criação de um histórico.</p>
             <p className="mt-1">Finalizado em 09/2024</p>
           </div>
         ),
       },
       {
         title: "Projeto Filmes  ",
-        src: "../../../img/letterbox-img.png",
+        src: filme,
         content: () => (
           <div>
             <p className="mt-2">

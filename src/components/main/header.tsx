@@ -1,7 +1,7 @@
 import Menu from "./menu-ham";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../../img/samuel.svg";
+import logo from "/img/samuel.svg";
 
 function Header({menuId}:{menuId:string}) {
   const [active,setActive] = useState(true);

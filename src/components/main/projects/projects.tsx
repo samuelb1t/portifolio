@@ -1,4 +1,4 @@
-import { ExpandCard } from "../../ui/expandCard";
+import { ExpandCard } from "./expandCards";
 
 function Projects() {
   return (

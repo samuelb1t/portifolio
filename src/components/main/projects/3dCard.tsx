@@ -1,6 +1,6 @@
 import { CardBody, CardContainer, CardItem } from "../../ui/3d-card";
 
-export function ProjectCard({ title, img }: { title: string; img: string }) {
+export function Card3d({ title, img }: { title: string; img: string }) {
   return (
     <CardContainer className="p-0">
       <CardBody className="bg-gray-50 relative dark:hover:shadow-2xl dark:hover:shadow-red-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-fit w-fit rounded-xl border cursor-pointer">
@@ -17,4 +17,4 @@ export function ProjectCard({ title, img }: { title: string; img: string }) {
   );
 }
 
-export default ProjectCard;
+export default Card3d;
