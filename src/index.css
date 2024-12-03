@@ -23,6 +23,10 @@
   line-height: 2.125rem;
 }
 
+.menu-rows{
+  grid-template-rows: 1fr auto;
+}
+
 .icon-transition {
   transition: 0.15s;
 }

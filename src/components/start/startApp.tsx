@@ -22,23 +22,23 @@ function StartApp() {
 
   return (
     <Bg id="start">
-      <div className="grid w-full h-full justify-center lines mt-4">
+      <div className="grid w-full h-full justify-center mt-4 menu-rows pb-4 sm:pb-0">
         <div className="h-fit">
-          <div className="flex items-baseline">
+          <div className="flex items-center sm:items-baseline flex-col sm:flex-row">
             <IoMdCode className="fill-red-700 w-8" />
-            <h1 className="text-7xl text-neutral-200 display-font">
+            <h1 className="text-3xl sm:text-7xl text-neutral-200 display-font">
               Samuel Bitdinger
             </h1>
           </div>
-          <div className="flex w-fit mx-auto mt-2">
-            <h2 className="text-neutral-200 text-5xl display-font">portifólio</h2>
-            <span className="text-red-700 justify-self-center text-7xl lh">
+          <div className="flex w-full justify-center mt-2 items-baseline">
+            <h2 className="text-neutral-200  text-2xl sm:text-5xl display-font">portifólio</h2>
+            <span className="text-red-700 justify-self-center text-4xl sm:text-7xl lh">
               .
             </span>
           </div>
         </div>
         <div
-          className="grid max-w-xs w-full justify-self-center gap-2 items-end"
+          className="grid max-w-xs w-full justify-self-center items-end gap-5"
           id="buttons"
         >
           <Button

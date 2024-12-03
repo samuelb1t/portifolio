@@ -5,7 +5,7 @@ function Button({ texto,onClick}: { texto: string,onClick:()=>void }) {
   const [state, setState] = useState(false);
   return (
     <button
-      className="text-neutral-200 border-2 border-solid border-neutral-200 rounded-2xl py-4 px-7"
+      className="text-neutral-200 border-2 border-solid border-neutral-200 rounded-2xl py-2 sm:py-4 px-5 sm:px-7"
       onMouseEnter={() => {
         setState(true);
       }}
@@ -20,7 +20,7 @@ function Button({ texto,onClick}: { texto: string,onClick:()=>void }) {
           id="icone"
           style={{ opacity: state ? 1 : 0 }}
         />
-        {texto}
+        <span className="text-2xl sm:text-3xl">{texto}</span>
       </div>
     </button>
   );

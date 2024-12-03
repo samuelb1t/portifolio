@@ -14,7 +14,7 @@ function Options({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibi
   const [isDark,setIsDark] = useState(false)
 
   return ( 
-    <motion.section className="w-72 h-full border-2 border-solid border-neutral-200 rounded-3xl grid justify-self-center relative" id="options"
+    <motion.section className="h-full border-2 border-solid border-neutral-200 rounded-3xl grid justify-self-center relative p-6 sm:p-10" id="options"
     initial={{x:"-50%", display: "none",opacity: 0}}
     animate={{x: isVisible ? 0 : "-50%", display: isVisible ? "grid" : "none", opacity: isVisible ? 1 : 0}}
     transition={{type: "tween", duration: .3}}
@@ -28,24 +28,24 @@ function Options({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibi
       >
         <IoClose className="fill-neutral-200 cursor-pointer" onClick={toggleVisibility}/>
       </motion.div>
-      <div className="self-center grid gap-4">
+      <div className="self-center grid gap-2 sm:gap-4">
         <div className="grid justify-center justify-items-center text-neutral-200">
-          <h2 className="font-bold mb-1">Idioma</h2>
+          <h2 className="font-bold mb-1 text-2xl sm:text-3xl">Idioma</h2>
           <div className="flex mr-3">
             <IoMdCode className="fill-red-700 w-5 " style={{ opacity: eng ? 0 : 1 }}/>
-            <span className="text-2xl font-normal cursor-pointer" onClick={() => {setEng(false);}}>
+            <span className="text-xl sm:text-2xl font-normal cursor-pointer" onClick={() => {setEng(false);}}>
               Português
             </span>
           </div>
           <div className="flex mr-3">
             <IoMdCode className="fill-red-700 w-5" style={{ opacity: eng ? 1 : 0 }}/>
-            <span className="text-2xl font-normal cursor-pointer" onClick={() => {setEng(true);}}>
+            <span className="text-xl sm:text-2xl font-normal cursor-pointer" onClick={() => {setEng(true);}}>
               Inglês
             </span>
-          </div>
+          </div>  
         </div>
         <div className="grid justify-center justify-items-center text-neutral-200">
-          <h2 className="font-bold mb-1">Tema</h2>
+          <h2 className="font-bold mb-1 text-2xl sm:text-3xl">Tema</h2>
           <div className="flex gap-8">
             <div className="flex">
               <IoMdCode className="fill-red-700 w-5" style={{ opacity: light ? 0 : 1 }}/>
