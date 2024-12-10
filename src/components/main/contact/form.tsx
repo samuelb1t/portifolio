@@ -24,7 +24,7 @@ export function Form() {
           <Textarea placeholder="Digite sua mensagem" name="message"></Textarea>
         </LabelInputContainer>
         <button
-          className="bg-gradient-to-br relative group/btn from-black to-neutral-600 dark:from-zinc-700 dark:to-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center gap-1"
+          className="bg-gradient-to-br relative group/btn from-black to-neutral-600 dark:from-neutral-700 dark:to-neutral-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center gap-1"
           type="submit"   
         >
           <IoMdCode className="fill-red-700 w-5"/>
