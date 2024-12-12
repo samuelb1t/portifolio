@@ -56,6 +56,11 @@ function mainApp() {
           <Contact></Contact>
         </div>
       </Bg>
+      <Bg id="contact">
+        <div className="sections">
+          <Header menuId="5"></Header>
+        </div>
+      </Bg>
     </div>
   );
 }
