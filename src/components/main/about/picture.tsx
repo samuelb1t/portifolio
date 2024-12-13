@@ -3,8 +3,8 @@ import foto from "/img/foto.png";
 
 export function Picture() {
   return (
-    <GlareCard className="flex flex-col items-center justify-center">
-        <img src={foto}/>
+    <GlareCard className="flex items-center justify-center">
+        <img src={foto} className="w-36 sm:w-auto h-40 sm:h-auto object-cover"/>
     </GlareCard>
   );
 }
