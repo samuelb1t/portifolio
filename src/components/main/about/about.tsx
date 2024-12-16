@@ -9,14 +9,14 @@ function About() {
 
   return (
     <section className="grid about-columns  sm:gap-12 mt-12 sm:mt-16">
-      <div className="text-neutral-200 flex flex-col items-center">
-        <h1 className="text-3xl sm:text-7xl font-bold sm:mb-8">
+      <div className="text-neutral-200 flex flex-col items-center sm:items-start">
+        <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold sm:mb-8">
           {title} <Cursor cursorColor="#b91c1c" />
         </h1>
-        <div className="block sm:hidden my-2">
+        <div className="block sm:hidden my-8">
           <Picture></Picture>   
         </div>
-        <p className="text-xs sm:text-2xl font-normal text-font max-w-60 sm:max-w-fit">
+        <p className="text-xs md:text-base lg:text-2xl font-normal text-font max-w-52 sm:max-w-fit">
           Olá me chamo Samuel, curso Engenharia de Software e busco
           oportunidades para atuar na área. Tenho conhecimentos em tecnologias
           como HTML, CSS, JavaScript, TypeScript e React. <br /> Estou sempre em
