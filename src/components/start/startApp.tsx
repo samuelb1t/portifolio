@@ -22,7 +22,7 @@ function StartApp() {
 
   return (
     <Bg id="start">
-      <div className="grid w-full h-full justify-center mt-4 menu-rows pb-4 sm:pb-0 md:gap-8">
+      <div className="grid justify-center mt-4 menu-rows pb-4 sm:pb-0 gap-20 md:gap-8 2xl:gap-36">
         <div className="h-fit">
           <div className="flex items-center xl:items-baseline flex-col xl:flex-row mt-12">
             <IoMdCode className="fill-red-700 2xl:w-12 2xl:h-12" />
