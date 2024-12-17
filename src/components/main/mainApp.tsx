@@ -12,7 +12,6 @@ function mainApp() {
     "wheel",
     (e) => {
       e.preventDefault();
-      console.log(e.deltaY);
       if (isScrolling) return;
       isScrolling = true;
       const vh = window.innerHeight;

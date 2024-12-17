@@ -1,12 +1,12 @@
 
 function Course({title,school,hours,date}:{title: string,school:string,hours:string,date:string}){
     return(
-        <section className="bg-neutral-900 min-w-80 max-w-96 max-h-48 text-center p-2 rounded-xl flex flex-col text-font gap-4" id="course">
-            <h3 className="text-lg font-bold">{title}</h3>
-            <span className="text-base block">{school}</span>
-            <span className="text-base block">{hours}</span>
-            <span className="text-base block">{date}</span>
-        </section>
+        <section className="bg-neutral-900 max-w-36 md:max-w-48 lg:max-w-72 xl:max-w-96 2xl:max-w-[36rem] 2xl:h-96 text-center p-2 2xl:p-6 rounded-xl flex flex-col justify-between text-font gap-1 xl:gap-2" id="course">
+            <h3 className="text-sm lg:text-base xl:text-lg 2xl:text-4xl font-bold break-words">{title}</h3>
+            <span className="text-xs lg:text-sm xl:text-base 2xl:text-3xl block">{school}</span>
+            <span className="text-xs lg:text-sm xl:text-base 2xl:text-3xl block">{hours}</span>
+            <span className="text-xs lg:text-sm xl:text-base 2xl:text-3xl block">{date}</span>
+        </section>  
     )
 }
 

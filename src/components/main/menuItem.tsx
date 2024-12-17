@@ -44,18 +44,18 @@ function MenuItem({
 
   return (
     <li
-      className="grid menu-columns  sm:gap-2 items-center relative after:content-[''] after:bg-slate-200 after:h-0.5 after:absolute after:-bottom-1  text-lg sm:text-2xl"
+      className="grid menu-columns  sm:gap-2 items-center relative after:content-[''] after:bg-slate-200 after:h-0.5 after:absolute after:-bottom-1  text-lg sm:text-2xl 2xl:text-5xl"
       style={{ "--after-width": mouseOn ? "100%" : "0" } as React.CSSProperties}
       onMouseEnter={toggleMenuHover}
       onMouseLeave={toggleMenuHover}
     >
       <IoMdCode
-        className="fill-red-700 w-4 sm:w-6 sm:self-end icon-transition"
+        className="fill-red-700 w-4 sm:w-6 2xl:w-10 sm:self-end icon-transition"
         style={{ opacity: isVisible ? 1 : 0, transition: "opacity 0.3s ease" }}
       />
       <a href={href}>{text}</a>
       <IoMdCode
-        className="fill-red-700 w-4 sm:w-6 sm:self-end icon-transition opacity-0"
+        className="fill-red-700 w-4 sm:w-6 2xl:w-10 sm:self-end icon-transition opacity-0"
       />
     </li>
   );
