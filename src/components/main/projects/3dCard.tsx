@@ -7,8 +7,8 @@ export function Card3d({ title, img }: { title: string; img: string }) {
         <CardItem translateZ="100" className="w-full">
           <div className="relative">
             <img src={img} alt={title} className="relative rounded-xl" />
-            <div className="h-full w-full absolute top-0 left-0 bg-black bg-opacity-30 flex justify-center items-center rounded-xl">
-              <h1 className="text-neutral-200">{title}</h1>
+            <div className="h-full w-full absolute top-0 left-0 bg-black bg-opacity-30 flex justify-center items-center rounded-xl text-center">
+              <h1 className="text-neutral-200 text-base md:text-2xl lg:text-3xl">{title}</h1>
             </div>
           </div>
         </CardItem>

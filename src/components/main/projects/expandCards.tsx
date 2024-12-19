@@ -53,24 +53,24 @@ export function ExpandCard() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-0 w-6"
               onClick={() => setActive(null)}
             ></motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-4/5 sm:w-full max-w-[500px] h-3/5 sm:h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
               <img
                 src={active.src}
                 alt={active.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-48 md:h-56 lg:h-64 object-cover"
               />
               <div className="p-4">
                 <h3 className="font-medium text-neutral-700 dark:text-neutral-200 text-base">
                   {active.title}
                 </h3>
-                <div className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400">
+                <div className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 lg:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400">
                   {typeof active.content === "function"
                     ? active.content()
                     : active.content}
@@ -80,7 +80,7 @@ export function ExpandCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="grid grid-cols-3 items-start gap-6">
+      <ul className="grid grid-cols-2 md:grid-cols-3 items-start gap-3 sm:gap-6">
         {project.map((card) => (
           <motion.div
             key={card.title}
