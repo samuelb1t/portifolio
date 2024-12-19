@@ -1,7 +1,7 @@
 import calculadora from "/img/calculadora.png";
 import clima from "/img/clima.png";
 import filme from "/img/letterbox.png";
-import { FaLink } from "react-icons/fa6";
+//import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 
 export const project = [
