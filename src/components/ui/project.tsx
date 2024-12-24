@@ -11,7 +11,7 @@ export const project = [
     content: () => (
       <div>
         <div>
-          <p className="mt-2">
+          <p className="mt-1 ">
             Projeto desenvolvido no grupo de estudo da AGES. Foi desenvolvido
             utilizando HTML, CSS e Javascript.
           </p>
@@ -19,7 +19,7 @@ export const project = [
         </div>
         <div className="flex mt-2 gap-4">
           <a href="https://github.com/samuelb1t/calculadora" target="_blank">
-            <FaGithub size={32} />
+            <FaGithub size={32}/>
           </a>
           {/* <a href="">
             <FaLink size={32} />
