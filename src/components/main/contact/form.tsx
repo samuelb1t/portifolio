@@ -9,7 +9,7 @@ import { IoMdCode } from "react-icons/io";
 export function Form() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-2  shadow-input">
-      <form className="grid gap-4' sm:w-auto" action="https://api.web3forms.com/submit" method="POST">
+      <form className="grid gap-4 sm:w-auto" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="31315395-dc2f-453c-9ec7-683cc43d0476" />
         <LabelInputContainer>
             <Label htmlFor="fullname">Nome completo</Label>
