@@ -44,7 +44,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           name={name}
           rows={4}
           className={cn(
-            `flex w-full h-24 border-none bg-gray-50 dark:bg-neutral-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-xl
+            `flex w-full h-24 border-none bg-gray-50 dark:bg-neutral-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-base sm:text-xl
              placeholder:text-neutral-400 dark:placeholder-text-neutral-600 
              focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600
              disabled:cursor-not-allowed disabled:opacity-50
