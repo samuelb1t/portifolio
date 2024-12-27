@@ -50,7 +50,7 @@ function Menu({isVisible,toggleVisibility,id}:{isVisible : boolean, toggleVisibi
 
       return(
         <div style={{backgroundColor: isVisible ? "#171717" :"#323232"}}
-             className="p-1 sm:p-2 2xl:p-4 text-neutral-200 text-2xl text-center rounded-xl 2xl:rounded-2xl grid absolute top-3 md:-top-1 lg:top-1 right-2 sm:right-0 2xl:right-24 z-50 bg-red-600" id={id}>
+             className="p-1 sm:p-2 2xl:p-4 text-neutral-200 text-2xl text-center rounded-xl 2xl:rounded-2xl grid absolute top-0 md:-top-1 lg:top-1 right-2 sm:right-0 2xl:right-24 z-50 bg-red-600" id={id}>
             <div className="flex items-center justify-between">
                 <MdLightMode style={{display: isVisible ? "none" : "block"}} className="cursor-pointer w-6 sm:w-auto sm:h-auto 2xl:w-12 ml-2" id="modo"/>
                 <div onClick={toggleVisibility}>

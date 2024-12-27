@@ -8,8 +8,8 @@ import { IoMdCode } from "react-icons/io";
 
 export function Form() {
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-2  shadow-input">
-      <form className="grid gap-4 sm:w-auto" action="https://api.web3forms.com/submit" method="POST">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-2 shadow-input">
+      <form className="grid gap-4 md:gap-2 lg:gap-4 sm:w-auto" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="31315395-dc2f-453c-9ec7-683cc43d0476" />
         <LabelInputContainer>
             <Label htmlFor="fullname">Nome completo</Label>
@@ -24,10 +24,10 @@ export function Form() {
           <Textarea placeholder="Digite sua mensagem" name="message"></Textarea>
         </LabelInputContainer>
         <button
-          className="text-xl sm:text-3xl bg-gradient-to-br relative group/btn from-black to-neutral-600 dark:from-neutral-700 dark:to-neutral-800 w-full text-white rounded-md py-1 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center gap-1"
+          className="text-xl md:text-2xl lg:text-3xl bg-gradient-to-br relative group/btn from-black to-neutral-600 dark:from-neutral-700 dark:to-neutral-800 w-full text-white rounded-md py-1 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] flex justify-center items-center gap-1"
           type="submit"   
         >
-          <IoMdCode className="fill-red-700 w-3 sm:w-5"/>
+          <IoMdCode className="fill-red-700 w-3 md:w-4 lg:w-5"/>
           Enviar
           <BottomGradient />
         </button>

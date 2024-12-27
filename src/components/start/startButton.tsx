@@ -11,12 +11,12 @@ function Button({ texto,onClick}: { texto: string,onClick:()=>void }) {
       }}
       onMouseLeave={() => {
         setState(false);
-      }}
+      }}  
       onClick={onClick}
     >
       <div className="flex justify-center relative pr-6 gap-1">
-        <IoMdCode
-          className="fill-red-700 w-6 self-end icon-transition"
+        <IoMdCode 
+          className="fill-red-700 w-6 h-6 self-center icon-transition"
           id="icone"
           style={{ opacity: state ? 1 : 0 }}
         />
