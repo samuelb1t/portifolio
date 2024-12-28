@@ -24,7 +24,7 @@ function Contact() {
         <span className="bg-neutral-200 w-full separator rounded-sm"></span>
         <a href="https://github.com/samuelb1t" target="_blank">
           <FaGithub
-            className={`w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 duration-300 transform ${onGithub ? 'scale-150' : 'scale-100'} fill-neutral-200`}
+            className={`w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 2xl:w-16 2xl:h-16 duration-300 transform ${onGithub ? 'scale-150' : 'scale-100'} fill-neutral-200`}
             onMouseEnter={toggleonGithub}
             onMouseLeave={toggleonGithub}
           />

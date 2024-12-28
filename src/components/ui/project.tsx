@@ -19,10 +19,10 @@ export const project = [
         </div>
         <div className="flex mt-2 gap-4">
           <a href="https://github.com/samuelb1t/calculadora" target="_blank">
-            <FaGithub size={32}/>
+            <FaGithub className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20" />
           </a>
           {/* <a href="">
-            <FaLink size={32} />
+            <FaLink className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20"/>
           </a> */}
         </div>
       </div>
@@ -43,11 +43,14 @@ export const project = [
           <p className="mt-1">Finalizado em 09/2024</p>
         </div>
         <div className="flex mt-2 gap-4">
-          <a href="https://github.com/samuelb1t/projeto-clima-frontend" target="_blank">
-            <FaGithub size={32} />
+          <a
+            href="https://github.com/samuelb1t/projeto-clima-frontend"
+            target="_blank"
+          >
+            <FaGithub className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20" />
           </a>
           {/* <a href="">
-            <FaLink size={32} />
+            <FaLink className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20"/>
           </a> */}
         </div>
       </div>
@@ -68,11 +71,14 @@ export const project = [
           <p className="mt-1">Em andamento</p>
         </div>
         <div className="flex mt-2 gap-4">
-          <a href="https://github.com/samuelb1t/projeto-letterbox-" target="_blank">
-            <FaGithub size={32} />
+          <a
+            href="https://github.com/samuelb1t/projeto-letterbox-"
+            target="_blank"
+          >
+            <FaGithub className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20" />
           </a>
           {/* <a href="">
-            <FaLink size={32} />
+            <FaLink className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20"/>
           </a> */}
         </div>
       </div>

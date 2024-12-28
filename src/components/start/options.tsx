@@ -26,7 +26,7 @@ function Options({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibi
       onMouseEnter={()=>{setIsClosing(true)}}
       onMouseLeave={()=>{setIsClosing(false)}}
       >
-        <IoClose className="fill-neutral-200 cursor-pointer md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-16 2xl:h-16" onClick={toggleVisibility}/>
+        <IoClose className="fill-neutral-200 cursor-pointer md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-16 2xl:h-16" onClick={toggleVisibility}/>
       </motion.div>
       <div className="self-center grid gap-2 sm:gap-4">
         <div className="grid justify-center justify-items-center text-neutral-200">
@@ -56,7 +56,7 @@ function Options({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibi
                 onMouseEnter={()=>{setIsDark(true)}}
                 onMouseLeave={()=>{setIsDark(false)}}             
               >
-                <MdDarkMode className="cursor-pointer md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-16 2xl:h-16" onClick={()=>{setLight(false)}} />
+                <MdDarkMode className="cursor-pointer md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-16 2xl:h-16" onClick={()=>{setLight(false)}} />
               </motion.div>
             </div>
             <div className="flex mr-3 items-center">
@@ -68,7 +68,7 @@ function Options({isVisible,toggleVisibility}:{isVisible : boolean, toggleVisibi
                 onMouseEnter={()=>{setIsLight(true)}}
                 onMouseLeave={()=>{setIsLight(false)}}
               >
-                <MdLightMode className="cursor-pointer md:w-5 md:h-5 xl:w-6 xl:h-6 2xl:w-16 2xl:h-16" onClick={()=>{setLight(true)}}/>
+                <MdLightMode className="cursor-pointer md:w-5 md:h-5 lg:w-6 lg:h-6   2xl:w-16 2xl:h-16" onClick={()=>{setLight(true)}}/>
               </motion.div>
             </div>
           </div>
