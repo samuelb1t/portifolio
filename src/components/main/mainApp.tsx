@@ -29,8 +29,15 @@ function mainApp() {
     { passive: false }
   );
 
+  function setDark(){
+    const isDark = localStorage.getItem("darkMode");
+    if(isDark != "true"){
+      document.getElementById("mainRoot")?.classList.remove("dark");
+    }
+  }
+
   return (
-    <div className="dark">
+    <div className="dark" id="mainRoot" onLoad={()=>{setDark()}}>
       <Bg id="about">
         <div className="sections">
           <Header menuId="1"></Header>
