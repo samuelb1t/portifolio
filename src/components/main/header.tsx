@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "/img/samuel.svg";
 
 function Header({menuId}:{menuId:string}) {
-  const [active,setActive] = useState(true);
+  const [active,setActive] = useState(false);
   const navigate = useNavigate();
 
  const toggleMenu = () =>{

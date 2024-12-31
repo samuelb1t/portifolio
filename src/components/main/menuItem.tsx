@@ -44,7 +44,7 @@ function MenuItem({
 
   return (
     <li
-      className="grid menu-columns  sm:gap-2 items-center relative after:content-[''] after:bg-slate-200 after:h-0.5 after:absolute after:-bottom-1  text-lg sm:text-2xl 2xl:text-5xl"
+      className="grid menu-columns  sm:gap-2 items-center relative after:content-[''] after:dark:bg-slate-200 after:bg-slate-950 after:h-0.5 after:absolute after:-bottom-1  text-lg sm:text-2xl 2xl:text-5xl"
       style={{ "--after-width": mouseOn ? "100%" : "0" } as React.CSSProperties}
       onMouseEnter={toggleMenuHover}
       onMouseLeave={toggleMenuHover}
