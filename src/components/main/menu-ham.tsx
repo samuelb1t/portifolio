@@ -65,7 +65,7 @@ function Menu({isVisible,toggleVisibility,id}:{isVisible : boolean, toggleVisibi
         const root = document.getElementById("mainRoot");
         root?.classList.toggle("dark");
         setDark(!dark);
-    }
+    }''
 
       return(
         <div style={{backgroundColor: isVisible ? "transparent" : dark ? "#323232" : "#E2DAD6"}}

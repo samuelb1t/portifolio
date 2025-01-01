@@ -1,7 +1,8 @@
 import Menu from "./menu-ham";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "/img/samuel.svg";
+//import logo from "/img/samuel.svg";
+import Logo from "./logo";
 
 function Header({menuId}:{menuId:string}) {
   const [active,setActive] = useState(false);
@@ -12,7 +13,7 @@ function Header({menuId}:{menuId:string}) {
 }
   return (
     <header className="flex justify-between lg:mb-12 relative px-6 lg:px-0 2xl:px-24 md:pt-0">
-      <a onClick={() => {navigate("/"); }}><img src={logo} className="mt-4 cursor-pointer w-20 lg:w-28 xl:w-auto 2xl:w-64"/></a>
+      <a onClick={() => {navigate("/"); }} className="w-20 lg:w-28 xl:w-auto 2xl:w-64"><Logo></Logo></a>
       <div>
         <Menu isVisible={active} toggleVisibility={toggleMenu} id={menuId}></Menu>
       </div>
