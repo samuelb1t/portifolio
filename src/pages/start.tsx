@@ -1,7 +1,7 @@
 import Button from "../components/start/startButton";
 import Options from "../components/start/options";
 import { IoMdCode } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Bg from "../components/background";
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +19,21 @@ function StartApp() {
     }
     setShowOp(!showOp);
   };
+
+  function setDark() {
+    const isDark = localStorage.getItem("darkMode");
+    console.log("aqui");
+    if (isDark) {
+      if (isDark != "true") {
+        document.getElementById("startRoot")?.classList.remove("dark");
+      }
+    }
+    localStorage.clear();
+  }
+
+  useEffect(() => {
+    setDark();
+  });
 
   return (
     <div className="dark" id="startRoot">

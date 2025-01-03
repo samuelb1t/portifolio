@@ -1,6 +1,6 @@
-import calculadora from "../../assets/calculadora.png";
-import clima from "../../assets/clima.png";
-import filme from "../../assets/letterbox.png";
+import calculadora from "../../../assets/calculadora.png";
+import clima from "../../../assets/clima.png";
+import filme from "../../../assets/letterbox.png";
 //import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 

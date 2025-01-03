@@ -4,6 +4,8 @@ import About from "../components/main/about/about";
 import Studies from "../components/main/studies/studies";
 import Projects from "../components/main/projects/projects";
 import Contact from "../components/main/contact/contact";
+import { ThemeProvider } from "../hooks/ThemeContext";
+import { useEffect } from "react";
 
 function mainApp() {
   let isScrolling = false;
@@ -34,41 +36,42 @@ function mainApp() {
     if (isDark != "true") {
       document.getElementById("mainRoot")?.classList.remove("dark");
     }
+    //localStorage.clear();
   }
 
+  useEffect(() => {
+    setDark();
+  });
+
   return (
-    <div
-      className="dark"
-      id="mainRoot"
-      onLoad={() => {
-        setDark();
-      }}
-    >
-      <Bg id="about">
-        <div className="sections">
-          <Header menuId="1"></Header>
-          <About></About>
-        </div>
-      </Bg>
-      <Bg id="studies">
-        <div className="sections">
-          <Header menuId="2"></Header>
-          <Studies></Studies>
-        </div>
-      </Bg>
-      <Bg id="projects">
-        <div className="sections">
-          <Header menuId="3"></Header>
-          <Projects></Projects>
-        </div>
-      </Bg>
-      <Bg id="contact">
-        <div className="sections">
-          <Header menuId="4"></Header>
-          <Contact></Contact>
-        </div>
-      </Bg>
-    </div>
+    <ThemeProvider>
+      <div className="dark" id="mainRoot">
+        <Bg id="about">
+          <div className="sections">
+            <Header menuId="1"></Header>
+            <About></About>
+          </div>
+        </Bg>
+        <Bg id="studies">
+          <div className="sections">
+            <Header menuId="2"></Header>
+            <Studies></Studies>
+          </div>
+        </Bg>
+        <Bg id="projects">
+          <div className="sections">
+            <Header menuId="3"></Header>
+            <Projects></Projects>
+          </div>
+        </Bg>
+        <Bg id="contact">
+          <div className="sections">
+            <Header menuId="4"></Header>
+            <Contact></Contact>
+          </div>
+        </Bg>
+      </div>
+    </ThemeProvider>
   );
 }
 

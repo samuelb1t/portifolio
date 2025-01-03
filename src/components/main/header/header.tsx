@@ -14,6 +14,13 @@ function Header({ menuId }: { menuId: string }) {
     <header className="flex justify-between lg:mb-12 relative px-6 lg:px-0 2xl:px-24 md:pt-0">
       <a
         onClick={() => {
+          if (
+            document.getElementById("mainRoot")?.classList.contains("dark")
+          ) {
+            localStorage.setItem("darkMode", "true");
+          } else {
+            localStorage.setItem("darkMode", "false");
+          }
           navigate("/");
         }}
       >
