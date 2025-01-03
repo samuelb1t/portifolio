@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import Svg from "./linkedinSvg";
+import LinkedinSvg from "../../../assets/linkedinSvg";
 import { Form } from "./form";
 import { useState } from "react";
 
@@ -36,7 +36,7 @@ function Contact() {
           className="duration-300"
           style={{ color: onLinkedin ? "#696969" : "#e5e5e5" }} 
         >
-          <Svg hover={toggleOnLinkedin} onLinkedin={onLinkedin}/>
+          <LinkedinSvg hover={toggleOnLinkedin} onLinkedin={onLinkedin}/>
         </a>
       </div>
       <Form></Form>

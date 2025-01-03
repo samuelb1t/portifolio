@@ -1,8 +1,8 @@
-import Button from "./startButton";
-import Options from "./options";
+import Button from "../components/start/startButton";
+import Options from "../components/start/options";
 import { IoMdCode } from "react-icons/io";
 import { useState } from "react";
-import Bg from "../background";
+import Bg from "../components/background";
 import { useNavigate } from "react-router-dom";
 
 function StartApp() {

@@ -1,5 +1,5 @@
 import { GlareCard } from "../../ui/glare-card";
-import foto from "/img/foto.png";
+import foto from "../../../assets/foto.png";
 
 export function Picture() {
   return (

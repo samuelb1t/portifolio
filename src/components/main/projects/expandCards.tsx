@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "../../hooks/use-outside-click";
+import { useOutsideClick } from "../../../hooks/use-outside-click";
 import ProjectCard from "./3dCard";
-import { project } from "../../ui/project";
+import { ProjectList } from "./projectList";
 
 export function ExpandCard() {
-  const [active, setActive] = useState<(typeof project)[number] | null>(null);
+  const [active, setActive] = useState<(typeof ProjectList)[number] | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -81,7 +81,7 @@ export function ExpandCard() {
         ) : null}
       </AnimatePresence>
       <ul className="grid grid-cols-2 md:grid-cols-3 items-start gap-3 sm:gap-6">
-        {project.map((card) => (
+        {ProjectList.map((card) => (
           <motion.div
             key={card.title}
             layoutId={`card-${card.title}-${id}`}

@@ -1,9 +1,9 @@
-import Bg from "../background";
-import Header from "./header";
-import About from "./about/about";
-import Studies from "./studies/studies";
-import Projects from "./projects/projects";
-import Contact from "./contact/contact";
+import Bg from "../components/background";
+import Header from "../components/main/header/header";
+import About from "../components/main/about/about";
+import Studies from "../components/main/studies/studies";
+import Projects from "../components/main/projects/projects";
+import Contact from "../components/main/contact/contact";
 
 function mainApp() {
   let isScrolling = false;
@@ -29,15 +29,21 @@ function mainApp() {
     { passive: false }
   );
 
-  function setDark(){
+  function setDark() {
     const isDark = localStorage.getItem("darkMode");
-    if(isDark != "true"){
+    if (isDark != "true") {
       document.getElementById("mainRoot")?.classList.remove("dark");
     }
   }
 
   return (
-    <div className="dark" id="mainRoot" onLoad={()=>{setDark()}}>
+    <div
+      className="dark"
+      id="mainRoot"
+      onLoad={() => {
+        setDark();
+      }}
+    >
       <Bg id="about">
         <div className="sections">
           <Header menuId="1"></Header>
