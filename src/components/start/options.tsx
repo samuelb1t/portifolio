@@ -2,7 +2,7 @@ import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 import { IoMdCode } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 function Options({
@@ -23,6 +23,17 @@ function Options({
     const root = document.getElementById("startRoot");
     root?.classList.toggle("dark");
   }
+
+  function checkTheme(){
+    const root = document.getElementById("startRoot");
+    if(!root?.classList.contains("dark")){
+      setLight(true);
+    }
+  }
+
+  useEffect(()=>{
+    checkTheme()
+  });
 
   return (
     <motion.section
@@ -111,8 +122,11 @@ function Options({
                 <MdDarkMode
                   className="cursor-pointer md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-16 2xl:h-16"
                   onClick={() => {
-                    setLight(false);
-                    changeTheme();
+                    const root = document.getElementById("startRoot");
+                    if(!root?.classList.contains("dark")){
+                      setLight(false);
+                      changeTheme();
+                    }
                   }}
                 />
               </motion.div>
@@ -138,8 +152,11 @@ function Options({
                 <MdLightMode
                   className="cursor-pointer md:w-5 md:h-5 lg:w-6 lg:h-6   2xl:w-16 2xl:h-16"
                   onClick={() => {
-                    setLight(true);
-                    changeTheme();
+                    const root = document.getElementById("startRoot");
+                    if(root?.classList.contains("dark")){
+                      setLight(true);
+                      changeTheme();
+                    }
                   }}
                 />
               </motion.div>

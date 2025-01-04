@@ -64,8 +64,8 @@ function Menu({
         backgroundColor: isVisible
           ? "transparent"
           : dark
-          ? "#E2DAD6"
-          : "#323232",
+          ? "#323232"
+          : "#E2DAD6",
       }}
       className="p-1 sm:p-2 2xl:p-4 dark:text-neutral-200 text-neutral-950 text-2xl text-center rounded-xl 2xl:rounded-2xl grid absolute top-0 md:-top-1 lg:top-1 right-2 sm:right-0 2xl:right-24 z-50 "
       id={id}
@@ -86,7 +86,7 @@ function Menu({
         <div onClick={toggleVisibility}>
           <Hamburger
             size={mobile ? 24 : 32}
-            color={dark ? "#0a0a0a" : "#e5e5e5"}
+            color={dark ? "#e5e5e5" : "#0a0a0a"}
             toggled={!isVisible}
             toggle={toggleVisibility}
           ></Hamburger>

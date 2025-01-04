@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type ThemeContextType = {
   dark: boolean;
@@ -10,13 +10,29 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [dark, setDark] = useState(() => {
     const root = document.getElementById("mainRoot");
-    return root?.classList.contains("dark") || false;
+    if (root) {
+      return root.classList.contains("dark");
+    }
+    return localStorage.getItem("darkMode") === "true";
   });
 
-  const toggleTheme = () => {
+  useEffect(() => {
     const root = document.getElementById("mainRoot");
-    root?.classList.toggle("dark");
-    setDark((prev) => !prev);
+    if (root) {
+      if (dark) {
+        root.classList.add("dark");
+      } else {
+        root.classList.remove("dark");
+      }
+    }
+  }, [dark]);
+
+  const toggleTheme = () => {
+    setDark((prev) => {
+      const newTheme = !prev;
+      localStorage.setItem("darkMode", newTheme ? "true" : "false");
+      return newTheme;
+    });
   };
 
   return (
