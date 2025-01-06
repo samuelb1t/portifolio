@@ -4,6 +4,10 @@ import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
 import MenuItem from "./menuItem";
 import { useTheme } from "../../../hooks/ThemeContext";
+import { useTranslation } from "react-i18next";
+import Br from "../../../assets/br.svg";
+import Us from "../../../assets/us.svg";
+
 
 function Menu({
   isVisible,
@@ -50,6 +54,9 @@ function Menu({
   useEffect(() => {
     isMobile();
     window.addEventListener("resize", isMobile);
+    if(i18n.language === "en"){
+      setEng(!eng);
+    }
 
     return () => {
       window.removeEventListener("resize", isMobile);
@@ -57,6 +64,20 @@ function Menu({
   }, []);
 
   const { dark, toggleTheme } = useTheme();
+
+  const { t, i18n } = useTranslation();
+  7;
+
+  const [eng, setEng] = useState(false);
+
+  function changeLang(){
+    setEng(!eng);
+    if(i18n.language === "en"){
+      i18n.changeLanguage("pt");
+    }else{
+      i18n.changeLanguage("en");
+    }
+  }
 
   return (
     <div
@@ -83,6 +104,18 @@ function Menu({
           id="modo"
           onClick={toggleTheme}
         />
+        <img
+          src={Br}
+          style={{ display: !isVisible && eng ? "block" : "none" }}
+          className="w-5 md:w-8 2xl:w-10 rounded-full cursor-pointer"
+          onClick={changeLang}
+        />
+        <img
+          src={Us}
+          style={{ display: !isVisible && !eng ? "block" : "none" }}
+          className="w-5 md:w-8 2xl:w-10 rounded-full cursor-pointer"
+          onClick={changeLang}
+        />
         <div onClick={toggleVisibility}>
           <Hamburger
             size={mobile ? 24 : 32}
@@ -97,14 +130,26 @@ function Menu({
         className="grid m-1 sm:m-2 2xl:m-4 gap-2 2xl:gap-6 items-center "
         id="ul"
       >
-        <MenuItem href="#about" text="Sobre mim" targetSectionId="1"></MenuItem>
-        <MenuItem href="#studies" text="Estudos" targetSectionId="2"></MenuItem>
+        <MenuItem
+          href="#about"
+          text={t("menu1")}
+          targetSectionId="1"
+        ></MenuItem>
+        <MenuItem
+          href="#studies"
+          text={t("menu2")}
+          targetSectionId="2"
+        ></MenuItem>
         <MenuItem
           href="#projects"
-          text="Projetos"
+          text={t("menu3")}
           targetSectionId="3"
         ></MenuItem>
-        <MenuItem href="#contact" text="Contato" targetSectionId="4"></MenuItem>
+        <MenuItem
+          href="#contact"
+          text={t("menu4")}
+          targetSectionId="4"
+        ></MenuItem>
       </ul>
     </div>
   );

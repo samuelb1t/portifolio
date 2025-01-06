@@ -4,6 +4,8 @@ import { IoMdCode } from "react-icons/io";
 import { useEffect, useState } from "react";
 import Bg from "../components/background";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import  { Suspense } from 'react';
 
 function StartApp() {
   const [showOp, setShowOp] = useState(false);
@@ -35,7 +37,10 @@ function StartApp() {
     setDark();
   });
 
+  const { t } = useTranslation();
+
   return (
+    <Suspense fallback="loading">
     <div className="dark" id="startRoot">
       <Bg id="start">
         <div className="grid justify-center mt-4 menu-rows pb-4 sm:pb-0 gap-20 md:gap-8 2xl:gap-36">
@@ -60,7 +65,7 @@ function StartApp() {
             id="buttons"
           >
             <Button
-              texto="Iniciar."
+              texto={t("botaoIniciar")}
               onClick={() => {
                 if (
                   document
@@ -74,8 +79,8 @@ function StartApp() {
                 navigate("/main");
               }}
             ></Button>
-            <Button texto="Opções." onClick={toggleOptions}></Button>
-            <Button texto="Sair." onClick={() => {}}></Button>
+            <Button texto={t("botaoOpcoes")} onClick={toggleOptions}></Button>
+            <Button texto={t("botaoSair")} onClick={() => {}}></Button>
           </div>
           <Options
             isVisible={showOp}
@@ -84,6 +89,7 @@ function StartApp() {
         </div>
       </Bg>
     </div>
+    </Suspense>
   );
 }
 

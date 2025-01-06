@@ -6,7 +6,7 @@ import ProjectCard from "./3dCard";
 import { ProjectList } from "./projectList";
 
 export function ExpandCard() {
-  const [active, setActive] = useState<(typeof ProjectList)[number] | null>(null);
+  const [active, setActive] = useState<(ReturnType<typeof ProjectList>)[number] | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -32,6 +32,8 @@ export function ExpandCard() {
 
   useOutsideClick(ref, () => setActive(null));
 
+  const projects = ProjectList();
+
   return (
     <>
       <AnimatePresence>
@@ -47,15 +49,6 @@ export function ExpandCard() {
       <AnimatePresence>
         {active ? (
           <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-0 w-6"
-              onClick={() => setActive(null)}
-            ></motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
@@ -81,7 +74,7 @@ export function ExpandCard() {
         ) : null}
       </AnimatePresence>
       <ul className="grid grid-cols-2 md:grid-cols-3 items-start gap-3 sm:gap-6">
-        {ProjectList.map((card) => (
+        {projects.map((card) => (
           <motion.div
             key={card.title}
             layoutId={`card-${card.title}-${id}`}

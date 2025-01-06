@@ -1,5 +1,6 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Picture } from "./picture";
+import { useTranslation } from "react-i18next";
 
 function About() {
   const [title] = useTypewriter({
@@ -7,6 +8,8 @@ function About() {
     loop: Infinity,
   });
 
+    const { t } = useTranslation();
+  
   return (
     <section className="grid about-columns sm:gap-12 2xl:gap-24 mt-12 sm:mt-16 2xl:mt-44 2xl:px-12">
       <div className="text-neutral-950 dark:text-neutral-200 flex flex-col items-center sm:items-start">
@@ -17,12 +20,7 @@ function About() {
           <Picture></Picture>   
         </div>
         <p className="text-xs md:text-base lg:text-xl xl:text-2xl 2xl:text-5xl 2xl:leading-[4rem] font-normal text-font max-w-52 sm:max-w-fit">
-          Olá me chamo Samuel, curso Engenharia de Software e busco
-          oportunidades para atuar na área. Tenho conhecimentos em tecnologias
-          como HTML, CSS, JavaScript, TypeScript e React. <br /> Estou sempre em
-          busca de novos desafios e oportunidades para crescer como
-          desenvolvedor e criar soluções inovadoras que possam impactar
-          positivamente as empresas e os usuários.
+        {t("about")}
         </p>
       </div>
       <div className="hidden sm:block">

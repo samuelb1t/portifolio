@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { IoMdCode } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function Options({
   isVisible,
@@ -34,6 +35,17 @@ function Options({
   useEffect(()=>{
     checkTheme()
   });
+
+  const { i18n, t } = useTranslation();
+  
+
+  function changeLanguage(){
+    if(i18n.language === "pt"){
+      i18n.changeLanguage("en");
+    }else{
+      i18n.changeLanguage("pt")
+    }
+  }
 
   return (
     <motion.section
@@ -67,7 +79,7 @@ function Options({
       <div className="self-center grid gap-2 sm:gap-4">
         <div className="grid justify-center justify-items-center text-neutral-950 dark:text-neutral-200 duration-700">
           <h2 className="font-bold mb-1 2xl:mb text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
-            Idioma
+          {t("idioma")}
           </h2>
           <div className="flex mr-3 items-center">
             <IoMdCode
@@ -77,10 +89,13 @@ function Options({
             <span
               className="text-xl 2xl:mb-2 lg:text-2xl xl:text-3xl 2xl:text-5xl font-normal cursor-pointer"
               onClick={() => {
+                if(eng){
+                  changeLanguage();
+                }
                 setEng(false);
               }}
             >
-              Português
+              {t("idioma1")}
             </span>
           </div>
           <div className="flex mr-3 items-center">
@@ -91,16 +106,19 @@ function Options({
             <span
               className="text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-normal cursor-pointer"
               onClick={() => {
+                if(!eng){
+                  changeLanguage();
+                }
                 setEng(true);
               }}
             >
-              Inglês
+              {t("idioma2")}
             </span>
           </div>
         </div>
         <div className="grid justify-center justify-items-center text-neutral-950 dark:text-neutral-200 duration-700">
           <h2 className="font-bold mb-1 2xl:mb-4 text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl">
-            Tema
+          {t("tema")}
           </h2>
           <div className="flex gap-8">
             <div className="flex items-center">
