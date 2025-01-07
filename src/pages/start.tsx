@@ -4,8 +4,7 @@ import { IoMdCode } from "react-icons/io";
 import { useEffect, useState } from "react";
 import Bg from "../components/background";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
-import  { Suspense } from 'react';
+import { useTranslation } from "react-i18next";
 
 function StartApp() {
   const [showOp, setShowOp] = useState(false);
@@ -40,10 +39,9 @@ function StartApp() {
   const { t } = useTranslation();
 
   return (
-    <Suspense fallback="loading">
     <div className="dark" id="startRoot">
       <Bg id="start">
-        <div className="grid justify-center mt-4 menu-rows pb-4 sm:pb-0 gap-20 md:gap-8 2xl:gap-36">
+        <div className="grid justify-center xl:h-full items-center mt-4 menu-rows xl:grid-rows-[auto_auto] pb-4 sm:pb-0 gap-20 md:gap-8 2xl:gap-36">
           <div className="h-fit">
             <div className="flex items-center xl:items-baseline flex-col xl:flex-row mt-12">
               <IoMdCode className="fill-red-700 xl:w-8 2xl:w-12 xl:h-8 2xl:h-12" />
@@ -61,7 +59,7 @@ function StartApp() {
             </div>
           </div>
           <div
-            className="grid justify-self-center items-end gap-5 2xl:gap-12 px-4 md:px-10 lg:px-4 xl:px-0"
+            className="grid justify-self-center xl:self-start items-end gap-5 2xl:gap-12 px-4 md:px-10 lg:px-4 xl:px-0"
             id="buttons"
           >
             <Button
@@ -89,7 +87,6 @@ function StartApp() {
         </div>
       </Bg>
     </div>
-    </Suspense>
   );
 }
 
