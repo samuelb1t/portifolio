@@ -49,7 +49,7 @@ function Options({
 
   return (
     <motion.section
-      className="h-full border-2 2xl:border-4 border-solid border-neutral-950 dark:border-neutral-200 rounded-3xl grid justify-self-center relative p-6 lg:p-10 xl:p-16 2xl:p-32"
+      className="h-full border-2 2xl:border-4 border-solid border-neutral-950 dark:border-neutral-200 rounded-3xl grid justify-self-center relative p-6 lg:px-10 xl:px-16 2xl:px-32"
       id="options"
       initial={{ x: "-50%", display: "none", opacity: 0 }}
       animate={{

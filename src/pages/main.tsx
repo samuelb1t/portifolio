@@ -47,7 +47,7 @@ function mainApp() {
     <ThemeProvider>
       <div className="dark" id="mainRoot">
         <Bg id="about">
-          <div className="sections">
+          <div className="sections lg:grid lg:items-center lg:h-full lg:grid-rows-[auto_1fr]">
             <Header menuId="1"></Header>
             <About></About>
           </div>

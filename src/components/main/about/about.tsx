@@ -11,7 +11,7 @@ function About() {
     const { t } = useTranslation();
   
   return (
-    <section className="grid about-columns sm:gap-12 2xl:gap-24 mt-12 sm:mt-16 2xl:mt-44 2xl:px-12">
+    <section className="grid about-columns sm:gap-12 2xl:gap-24 mt-12 sm:mt-16 2xl:mt-44 2xl:px-12 lg:mb-32">
       <div className="text-neutral-950 dark:text-neutral-200 flex flex-col items-center sm:items-start">
         <h1 className="text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-bold sm:mb-8 2xl:mb-28">
           {title} <Cursor cursorColor="#b91c1c" />
