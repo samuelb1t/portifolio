@@ -1,6 +1,7 @@
 import calculadora from "../../../assets/calculadora.png";
 import clima from "../../../assets/clima.png";
 import filme from "../../../assets/letterbox.png";
+import portfolio from "../../../assets/portfolio.png";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -62,6 +63,27 @@ export const ProjectList = () => {
           <div className="flex mt-2 gap-4">
             <a
               href="https://github.com/samuelb1t/projeto-letterbox-"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-6 h-6 md:w-8 md:h-8 2xl:w-20 2xl:h-20" />
+            </a>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: t("projeto4"),
+      src: portfolio,
+      content: () => (
+        <div>
+          <div>
+            <p className="mt-2">{t("projeto4_desc")}</p>
+            <p className="mt-1">{t("projeto4_andamento")}</p>
+          </div>
+          <div className="flex mt-2 gap-4">
+            <a
+              href="https://github.com/samuelb1t/portifolio"
               target="_blank"
               rel="noopener noreferrer"
             >

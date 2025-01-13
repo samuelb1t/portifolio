@@ -140,15 +140,20 @@ function Menu({
           text={t("menu2")}
           targetSectionId="2"
         ></MenuItem>
+                <MenuItem
+          href="#skills"
+          text="Skills"
+          targetSectionId="3"
+        ></MenuItem>
         <MenuItem
           href="#projects"
           text={t("menu3")}
-          targetSectionId="3"
+          targetSectionId="4"
         ></MenuItem>
         <MenuItem
           href="#contact"
           text={t("menu4")}
-          targetSectionId="4"
+          targetSectionId="5"
         ></MenuItem>
       </ul>
     </div>

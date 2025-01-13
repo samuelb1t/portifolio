@@ -4,6 +4,7 @@ import About from "../components/main/about/about";
 import Studies from "../components/main/studies/studies";
 import Projects from "../components/main/projects/projects";
 import Contact from "../components/main/contact/contact";
+import Skills from "../components/main/skills/skills";
 import { ThemeProvider } from "../hooks/ThemeContext";
 import { useEffect } from "react";
 
@@ -58,15 +59,21 @@ function mainApp() {
             <Studies></Studies>
           </div>
         </Bg>
-        <Bg id="projects">
+        <Bg id="skills">
           <div className="sections">
             <Header menuId="3"></Header>
+            <Skills></Skills>
+          </div>
+        </Bg>
+        <Bg id="projects">
+          <div className="sections">
+            <Header menuId="4"></Header>
             <Projects></Projects>
           </div>
         </Bg>
         <Bg id="contact">
           <div className="sections">
-            <Header menuId="4"></Header>
+            <Header menuId="5"></Header>
             <Contact></Contact>
           </div>
         </Bg>
