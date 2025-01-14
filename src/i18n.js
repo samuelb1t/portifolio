@@ -29,7 +29,7 @@ i18n
           menu3: "Projects",
           menu4: "Contact",
           about:
-            "Hello, my name is Samuel. I'm studying Software Engineering and I'm looking for opportunities to work in this field. I have knowledge of technologies such as HTML, CSS, JavaScript, TypeScript and React. I'm always looking for new challenges and opportunities to grow as a developer and create innovative solutions that can positively impact companies and users.",
+            "Hello, my name is Samuel. I'm studying Software Engineering and I'm looking for opportunities to work in this field. I have knowledge of technologies such as HTML, CSS, JavaScript, TypeScript and React, besides that, I'm fluent in english. I'm always looking for new challenges and opportunities to grow as a developer and create innovative solutions that can positively impact companies and users.",
           estudos: "STUDIES",
           faculdade: "University",
           curso1: "Computer Engineering",
@@ -74,7 +74,7 @@ i18n
           menu3: "Projetos",
           menu4: "Contato",
           about:
-            "Olá me chamo Samuel, curso Engenharia de Software e busco oportunidades para atuar na área. Tenho conhecimentos em tecnologias como HTML, CSS, JavaScript, TypeScript e React. <br /> Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor e criar soluções inovadoras que possam impactar positivamente as empresas e os usuários.",
+            "Olá me chamo Samuel, curso Engenharia de Software e busco oportunidades para atuar na área. Tenho conhecimentos em tecnologias como HTML, CSS, JavaScript, TypeScript e React, além disso, sou fluente em inglês. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor e criar soluções inovadoras que possam impactar positivamente as empresas e os usuários.",
           estudos: "ESTUDOS",
           faculdade: "Faculdade",
           curso1: "Engenharia de Computação",
