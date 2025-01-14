@@ -37,7 +37,6 @@ function mainApp() {
     if (isDark != "true") {
       document.getElementById("mainRoot")?.classList.remove("dark");
     }
-    //localStorage.clear();
   }
 
   useEffect(() => {
