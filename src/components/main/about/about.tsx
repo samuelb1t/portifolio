@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 function About() {
   const [title] = useTypewriter({
-    words: ["Front-end dev"],
+    words: ["Full Stack dev"],
     loop: Infinity,
   });
 
